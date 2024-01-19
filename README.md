@@ -83,4 +83,3 @@ For any issues or queries regarding `LTPI`, feel free to reach out via email: hl
 
 ---
 
-This revision aims to enhance clarity, formatting, and overall readability. The dependencies section was slightly modified to include Python's version and to suggest installation methods. The structure of sections like installation, running the tool, and updating it has been made more user-friendly.
