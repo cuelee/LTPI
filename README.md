@@ -1,5 +1,4 @@
 # LTPI 
-Liability Threshold Phenotypic Integration
 
 `LTPI` is a command line tool to derive new phenotypes for a target disease by combining genetic relatedness information with phenotypic information.
 
