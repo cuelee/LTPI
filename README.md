@@ -33,6 +33,7 @@ If users prefer to use conda, they can define the LTPI environment using the fol
 ```bash
 conda env create -f environment.yml
 conda activate LTPI
+```
 
 ### Running LTPI
 
