@@ -35,7 +35,7 @@ conda env create -f environment.yml
 conda activate LTPI
 ```
 
-### Running LTPI
+## Running LTPI
 
 After installing the dependencies, you can start using `LTPI` by running:
 
