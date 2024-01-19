@@ -26,7 +26,7 @@ cd LTPI
 
 You can install these dependencies using pip or conda.
 
-## Creating the LTPI Environment with Conda
+### Creating the LTPI Environment with Conda
 
 If users prefer to use conda, they can define the LTPI environment using the following command:
 
