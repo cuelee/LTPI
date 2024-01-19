@@ -1,0 +1,10 @@
+name: LTPI
+channels:
+  - defaults
+dependencies:
+  - python=3
+  - pandas
+  - numpy
+  - numba
+  - scipy
+  - scikit-learn
