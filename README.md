@@ -26,6 +26,14 @@ cd LTPI
 
 You can install these dependencies using pip or conda.
 
+## Creating the LTPI Environment with Conda
+
+If users prefer to use conda, they can define the LTPI environment using the following command:
+
+```bash
+conda env create -f environment.yml
+conda activate LTPI
+
 ### Running LTPI
 
 After installing the dependencies, you can start using `LTPI` by running:
