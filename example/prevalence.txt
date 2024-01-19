@@ -1,4 +1,4 @@
-TID prev
-trait_A 0.05
-trait_B 0.05
-trait_C 0.05
+TID	prev
+trait_A	0.05
+trait_B	0.05
+trait_C	0.05
