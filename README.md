@@ -1,57 +1,77 @@
-# LTPI
-- Liability Threshold Phenotipic Integration
+# LTPI - Liability Threshold Phenotypic Integration
 
 `LTPI` is a command line tool to derive new phenotypes for a target disease by combining genetic relatedness information with phenotypic information.
 
 ## Getting Started
 
-In order to download `LTPI`, you should clone this repository via the command
-```
+### Installation
+
+To install `LTPI`, clone this repository using the following commands:
+
+```bash
 git clone https://github.com/cuelee/LTPI.git
 cd LTPI
 ```
 
-In order to run `LTPI`, the following python dependencies must be installed in your system.
+### Dependencies
 
-- python
+`LTPI` requires the following Python dependencies to be installed:
+
+- Python 3.x
 - pandas
 - numpy
 - numba
 - scipy
-- sklearn
+- scikit-learn
 
+You can install these dependencies using pip or conda.
 
-Once the above has completed, you can run the following command:
+### Running LTPI
 
-```
+After installing the dependencies, you can start using `LTPI` by running:
+
+```bash
 ./LTPI.py -h
 ```
 
+This command displays the help information and available commands.
+
 ## Updating LTPI
-You can update to the newest version of `LTPI` using git. First, navigate to your LTPI/ directory (e.g., cd LTPI), then run
-```
+
+To update `LTPI` to the latest version, navigate to your `LTPI/` directory and run:
+
+```bash
 git pull
 ```
-If `LTPI` is up to date, you will see
+
+If `LTPI` is already up to date, the output will be:
+
 ```
-Already up-to-date.
+Already up to date.
 ```
-## For first-time users
-An executable example file and run command can be found on the LTPI/ directory with file name runexample.bash.
+
+## For First-Time Users
+
+New users can find an executable example file in the `LTPI/` directory, named `runexample.bash`. This example provides a practical guide to using `LTPI`.
 
 ## Citation
 
-If you use the software, please cite
-LEE, C. H., Khan, A., Weng, C., Buxbaum, J. D., Kiryluk, K., Ionita-Laza, I. Liability threshold model-based disease risk prediction based on Electronic Health Record phenotypes. Under Review
+If you utilize `LTPI` in your research, please cite the following paper:
+
+LEE, C. H., Khan, A., Weng, C., Buxbaum, J. D., Kiryluk, K., Ionita-Laza, I., "Liability threshold model-based disease risk prediction based on Electronic Health Record phenotypes," Under Review.
 
 ## Support
 
-Issues with LTPI? Email hl3565@cumc.columbia.edu
+For any issues or queries regarding `LTPI`, feel free to reach out via email: hl3565@cumc.columbia.edu
 
 ## License 
 
-This project has under MIT license.
+`LTPI` is released under the MIT License. See the LICENSE file for more details.
 
 ## Authors
 
-Cue Hyunkyu Lee ( Columbia University Irving Medical Center)
+- Cue Hyunkyu Lee, Columbia University Irving Medical Center
+
+---
+
+This revision aims to enhance clarity, formatting, and overall readability. The dependencies section was slightly modified to include Python's version and to suggest installation methods. The structure of sections like installation, running the tool, and updating it has been made more user-friendly.
