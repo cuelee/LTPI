@@ -66,7 +66,7 @@ Provide the required input arguments based on your analysis type. Optional param
 | `--gencov`     | Path to genetic covariance matrix.                       | Yes        |
 | `--envcov`     | Path to environmental covariance matrix.                 | Optional   |
 
-#### Trait Selection (ATSA) Analysis Option (Optimization with `--pick`)
+#### ATSA analysis Option (Optimization with `--pick`)
 | Argument       | Description                                               | Required?  |
 |----------------|-----------------------------------------------------------|------------|
 | `--pick`       | Optimize non-target trait selection based on `r2_o`.       | No         |
@@ -74,12 +74,12 @@ Provide the required input arguments based on your analysis type. Optional param
 | `--Q`          | Number of non-target traits to select (default: 30).       | No         |
 
 ### Covariance Matrix Arguments
-| Argument          | Description                                                     | Required? |
-|-------------------|-----------------------------------------------------------------|-----------|
-| `--gencov`        | Path to genetic covariance matrix.                              | Yes       |
-| `--envcov`        | Path to environmental covariance matrix.                        | Optional  |
-| `--shrink`        | Apply covariance shrinkage: G for GENCOV, E for ENVCOV, B for both. | Optional  |
-| `--shrink_target` | Target condition number for covariance shrinkage (default: 1.5).| No        |
+| Argument             | Description                                                     | Required? |
+|----------------------|-----------------------------------------------------------------|-----------|
+| `--gencov`           | Path to genetic covariance matrix.                              | Yes       |
+| `--envcov`           | Path to environmental covariance matrix.                        | Optional  |
+| `--shrink`           | Apply covariance shrinkage: G for GENCOV, E for ENVCOV, B for both. | Optional  |
+| `--shrink_target`    | Target condition number for covariance shrinkage (default: 1.5).| No        |
 
 **Note**: When `--envcov` is not provided, `LTPI` assumes the environmental covariance matrix (`envcov`) by transforming the genetic covariance matrix (`gencov`).
 
