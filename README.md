@@ -97,7 +97,7 @@ You can customize the analysis by using various optional parameters, such as spe
 ### Parameters Specific to R2 Selection (ATSA)
 | Argument   | Description                                    | Default |
 |------------|------------------------------------------------|---------|
-| `--r2`     | `r2_o` threshold for ATSA.                     | 0.0     |
+| `--r2`     | Threshold value for ATSA analysis.                     | 0.0     |
 
 <br><br>
 
