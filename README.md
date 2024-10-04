@@ -9,8 +9,24 @@
 2. [Installation](#installation)
 3. [Usage](#usage)
 4. [Input Arguments](#input-arguments)
-5. [Analysis Modes](#analysis-modes)
-6. [Examples](#examples)
+   - [Core Arguments](#core-arguments)
+   - [Covariance Matrix Arguments](#covariance-matrix-arguments)
+   - [Optional Arguments](#optional-arguments)
+   - [Output Control](#output-control)
+5. [Input File Formats](#input-file-formats)
+   - [Phenotype Matrix](#1-phenotype-matrix---bin---con)
+   - [Covariance Matrix](#2-covariance-matrix---gencov---envcov)
+   - [Prevalence File](#3-prevalence-file---prevalence)
+6. [Analysis Modes](#analysis-modes)
+   - [Binary Phenotype Analysis](#1-binary-phenotype-analysis---bin)
+   - [Continuous Phenotype Analysis](#2-continuous-phenotype-analysis---con)
+   - [Trait Selection](#3-trait-selection---pick)
+7. [Examples](#examples)
+   - [Example 1: Binary Phenotype Analysis](#example-1-binary-phenotype-analysis)
+   - [Example 2: Continuous Phenotype Analysis](#example-2-continuous-phenotype-analysis)
+   - [Example 3: Trait Selection](#example-3-trait-selection)
+8. [Contact](#contact)
+
 
 <br><br>
 
