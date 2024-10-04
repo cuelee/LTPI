@@ -108,7 +108,7 @@ Covariance shrinkage is often necessary because covariance matrices can be non-p
 <br><br>
 
 ### Optional Arguments
-| Argument         | Description                                                    | Required?  |
+| Argument         | Description                                                    | Default  |
 |-------------------------|----------------------------------------------------------------|------------|
 | `--rint`         | Apply rank-based inverse normal transformation on LTPI scores. | No         |
 | `--nsample`      | Number of samples for the GHK algorithm.                       | 50000      |
