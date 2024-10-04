@@ -89,19 +89,19 @@ You can customize the analysis by using various optional parameters, such as spe
 ### Optional Arguments
 
 #### Rank-Based Inverse Normal Transformation
-| Argument       | Description                                               | Required?  |
-|----------------|-----------------------------------------------------------|------------|
-| `--rint`       | Apply rank-based inverse normal transformation on LTPI scores. | No     |
+| Argument         | Description                                                    | Required?  |
+|------------------|----------------------------------------------------------------|------------|
+| `--rint`         | Apply rank-based inverse normal transformation on LTPI scores. | No         |
+| `--nsample_main` | Number of samples for the GHK algorithm.                       | 50000      |
+| `--r2`           | Threshold value for ATSA analysis.                             | 0.0        |
 
 #### Parameters Specific to GHK Algorithm
 | Argument           | Description                                       | Default |
 |--------------------|---------------------------------------------------|---------|
-| `--nsample_main`   | Number of samples for the GHK algorithm.          | 50000   |
 
 #### Parameters Specific to R2 Selection (ATSA)
 | Argument   | Description                                    | Default |
 |------------|------------------------------------------------|---------|
-| `--r2`     | Threshold value for ATSA analysis.             | 0.0     |
 
 <br><br>
 
