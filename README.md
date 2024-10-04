@@ -62,6 +62,8 @@ cd LTPI
 
 Provide the required input arguments based on your analysis type. Optional parameters, such as covariance matrices and analysis-specific parameters, can further adjust your analysis.
 
+<br><br>
+
 ## Arguments
 
 ### Core Arguments
