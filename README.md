@@ -44,11 +44,9 @@ You can customize the analysis by using various optional parameters, such as spe
 
 <br><br>
 
-## Input Arguments
+## Core Arguments
 
-### Core Arguments
-
-#### Binary Phenotype Analysis Input
+### Binary Phenotype Analysis Input
 | Argument       | Description                                             | Required?  |
 |----------------|---------------------------------------------------------|------------|
 | `--bin`        | Path to the binary phenotype input file.                 | Yes        |
@@ -56,7 +54,7 @@ You can customize the analysis by using various optional parameters, such as spe
 | `--gencov`     | Path to genetic covariance matrix.                       | Yes        |
 | `--envcov`     | Path to environmental covariance matrix.                 | Optional   |
 
-#### Continuous Phenotype Analysis Input
+### Continuous Phenotype Analysis Input
 | Argument       | Description                                             | Required?  |
 |----------------|---------------------------------------------------------|------------|
 | `--con`        | Path to the quantitative phenotype input file.           | Yes        |
@@ -64,7 +62,7 @@ You can customize the analysis by using various optional parameters, such as spe
 | `--gencov`     | Path to genetic covariance matrix.                       | Yes        |
 | `--envcov`     | Path to environmental covariance matrix.                 | Optional   |
 
-#### Trait Selection (ATSA) Analysis Option (Optimization with `--pick`)
+### Trait Selection (ATSA) Analysis Option (Optimization with `--pick`)
 | Argument       | Description                                               | Required?  |
 |----------------|-----------------------------------------------------------|------------|
 | `--pick`       | Optimize non-target trait selection based on `r2_o`.       | No         |
@@ -81,27 +79,27 @@ You can customize the analysis by using various optional parameters, such as spe
 
 **Note**: When `--envcov` is not provided, `LTPI` assumes the environmental covariance matrix (`envcov`) by transforming the genetic covariance matrix (`gencov`).
 
-### Optional Arguments
+## Output Control
+| Argument       | Description                                           | Default   |
+|----------------|-------------------------------------------------------|-----------|
+| `--out`        | Prefix for output files.                              | `LTPI`    |
 
-#### Rank-Based Inverse Normal Transformation
+## Optional Arguments
+
+### Rank-Based Inverse Normal Transformation
 | Argument       | Description                                               | Required?  |
 |----------------|-----------------------------------------------------------|------------|
 | `--rint`       | Apply rank-based inverse normal transformation on LTPI scores. | No     |
 
-#### Parameters Specific to GHK Algorithm
+### Parameters Specific to GHK Algorithm
 | Argument           | Description                                       | Default |
 |--------------------|---------------------------------------------------|---------|
 | `--nsample_main`   | Number of samples for the GHK algorithm.          | 50000   |
 
-#### Parameters Specific to R2 Selection (ATSA)
+### Parameters Specific to R2 Selection (ATSA)
 | Argument   | Description                                    | Default |
 |------------|------------------------------------------------|---------|
 | `--r2`     | Threshold value for ATSA analysis.             | 0.0     |
-
-### Output Control
-| Argument       | Description                                           | Default   |
-|----------------|-------------------------------------------------------|-----------|
-| `--out`        | Prefix for output files.                              | `LTPI`    |
 
 <br><br>
 
