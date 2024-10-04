@@ -13,15 +13,15 @@
 <br><br>
 
 ## Overview
-`LTPI` provides three different analysis modes:
+`LTPI` offers three analysis modes:
 - **Binary phenotype analysis** (`--bin`)
 - **Continuous phenotype analysis** (`--con`)
 - **Trait selection optimization** (`--pick`)
 
-### Included Features:
-- Evaluation of expected genetic liability using GHK algorithm and maximum likelihood
-- Covariance shrinkage to improve the model's performance
-- Automatic trait selection based on `r2_o` criteria
+### Key Features:
+- Estimation of genetic liability using the GHK algorithm and maximum likelihood
+- Covariance shrinkage to enhance model performance
+- Automatic trait selection based on the `r2_o` criterion
 
 <br><br>
 
@@ -86,8 +86,6 @@ Provide the required input arguments based on your analysis type. Optional param
 <br><br>
 
 ### Optional Arguments
-
-#### Rank-Based Inverse Normal Transformation
 | Argument         | Description                                                    | Required?  |
 |-------------------------|----------------------------------------------------------------|------------|
 | `--rint`         | Apply rank-based inverse normal transformation on LTPI scores. | No         |
@@ -119,24 +117,24 @@ The prevalence file is a two-column tab-delimited file with a header. The first 
 <br><br>
 
 ## Analysis Modes
-`LTPI` offers three distinct modes of analysis, depending on the input data type:
+`LTPI` provides three analysis modes based on input data type:
 
-### 1. Binary Phenotype Input (`--bin`)
-This mode is designed for binary phenotype data. It requires the binary phenotype input file using `--bin`, along with disease prevalence information (`--prevalence`) and covariance matrices (`--gencov` and `--envcov`). The results will estimate the genetic liability for binary traits.
+### 1. Binary Phenotype Analysis (`--bin`)
+For binary phenotype data, this mode requires the binary input file (`--bin`), disease prevalence data (`--prevalence`), and covariance matrices (`--gencov`, `--envcov`). It estimates genetic liability for binary traits.
 
-**Note**: At least one binary target trait must be provided. The `LTPI` analysis cannot proceed if the number of binary traits is zero.
+**Note**: At least one binary trait is required for analysis.
 
-### 2. Continuous Phenotype Input (`--con`)
-This mode handles continuous phenotype data. It requires a reference to a previous binary phenotype analysis (using --bout) and performs an additional estimation based on continuous traits, leveraging both the binary and continuous information.
+### 2. Continuous Phenotype Analysis (`--con`)
+This mode handles continuous phenotype data. It requires the output from a previous binary analysis (`--bout`) and estimates liability based on continuous traits, integrating both binary and continuous data.
 
 ### 3. Trait Selection (`--pick`)
-In this mode, `LTPI` optimizes the selection of non-target traits based on the `r2_o` criterion. It is useful for identifying key features that are most relevant to the target phenotype.
+Optimizes non-target trait selection using the `r2_o` criterion, identifying traits most relevant to the target phenotype.
 
 <br><br>
 
 ## Examples
 
-The `LTPI` package includes a runnable example script called `runexample.bash`, which demonstrates how to use the different analysis modes provided by `LTPI`. This script allows you to easily test the package and explore its functionality.
+The `LTPI` package includes a runnable example script, `runexample.bash`, which demonstrates how to use three analysis modes provided by `LTPI`. 
 
 ### Running the Example
 
