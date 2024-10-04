@@ -81,10 +81,7 @@ You can customize the analysis by using various optional parameters, such as spe
 
 **Note**: When `--envcov` is not provided, `LTPI` assumes the environmental covariance matrix (`envcov`) by transforming the genetic covariance matrix (`gencov`).
 
-### Output Control
-| Argument       | Description                                           | Default   |
-|----------------|-------------------------------------------------------|-----------|
-| `--out`        | Prefix for output files.                              | `LTPI`    |
+<br><br>
 
 ### Optional Arguments
 
@@ -94,6 +91,13 @@ You can customize the analysis by using various optional parameters, such as spe
 | `--rint`         | Apply rank-based inverse normal transformation on LTPI scores. | No         |
 | `--nsample_main` | Number of samples for the GHK algorithm.                       | 50000      |
 | `--r2`           | Threshold value for ATSA analysis.                             | 0.0        |
+
+<br><br>
+
+### Output Control
+| Argument       | Description                                           | Default   |
+|----------------|-------------------------------------------------------|-----------|
+| `--out`        | Prefix for output files.                              | `LTPI`    |
 
 <br><br>
 
