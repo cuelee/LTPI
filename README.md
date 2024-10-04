@@ -79,6 +79,8 @@ You can customize the analysis by using various optional parameters, such as spe
 | `--shrink`        | Apply covariance shrinkage: G for GENCOV, E for ENVCOV, B for both. | Optional  |
 | `--shrink_target` | Target condition number for covariance shrinkage (default: 1.5).| No        |
 
+**Note**: When `--envcov` is not provided, `LTPI` assumes the environmental covariance matrix (`envcov`) by transforming the genetic covariance matrix (`gencov`).
+
 ### Parameters Specific to GHK Algorithm
 | Argument           | Description                                       | Default |
 |--------------------|---------------------------------------------------|---------|
@@ -90,25 +92,18 @@ You can customize the analysis by using various optional parameters, such as spe
 | `--r2`     | `r2_o` threshold for ATSA.                     | 0.0     |
 
 ## Analysis Modes
-`LTPI` provides three modes of analysis, depending on the input data type:
+`LTPI` offers three distinct modes of analysis, depending on the input data type:
 
 ### 1. Binary Phenotype Input (`--bin`)
-This mode is used when the input phenotype data is binary. It requires the path to the binary phenotype input file, disease prevalence data, and covariance matrices.
-```bash
-python LTPI.py --bin <binary_input_file> --gencov <genetic_covariance_file> --prevalence <prevalence_file> --out <output_prefix>
-```
+This mode is designed for binary phenotype data. It requires the binary phenotype input file using `--bin`, along with disease prevalence information (`--prevalence`) and covariance matrices (`--gencov` and `--envcov`). The results will estimate the genetic liability for binary traits.
+
+**Note**: At least one binary target trait must be provided. The `LTPI` analysis cannot proceed if the number of binary traits is zero.
 
 ### 2. Continuous Phenotype Input (`--con`)
-This mode is used for continuous phenotype data. It requires the path to the quantitative input file and a reference to the output from a previous binary analysis (`--bout`).
-```bash
-python LTPI.py --con <quantitative_input_file> --gencov <genetic_covariance_file> --bout <binary_output_prefix> --out <output_prefix>
-```
+This mode handles continuous phenotype data. It requires a reference to a previous binary phenotype analysis (using --bout) and performs an additional estimation based on continuous traits, leveraging both the binary and continuous information.
 
 ### 3. Trait Selection (`--pick`)
-In this mode, `LTPI` optimizes non-target trait selection based on the `r2_o` criterion. This mode is useful for feature selection in large-scale genetic datasets.
-```bash
-python LTPI.py --pick --pi <target_trait> --gencov <genetic_covariance_file> --out <output_prefix>
-```
+In this mode, `LTPI` optimizes the selection of non-target traits based on the `r2_o` criterion. It is useful for identifying key features that are most relevant to the target phenotype.
 
 ## Examples
 
