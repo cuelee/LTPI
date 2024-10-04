@@ -84,8 +84,6 @@ Provide the required input arguments based on your analysis type. Optional param
 | `--gencov`     | Path to genetic covariance matrix.                       | Yes        |
 | `--envcov`     | Path to environmental covariance matrix.                 | Optional   |
 
-**Note**: The `--bin` or `--con` can be used concurrently with `--pick` to perform trait selection optimization during phenotype analysis.
-
 #### ATSA analysis Option (Optimization with `--pick`)
 | Argument       | Description                                               | Required?  |
 |----------------|-----------------------------------------------------------|------------|
@@ -93,6 +91,8 @@ Provide the required input arguments based on your analysis type. Optional param
 | `--gencov`     | Path to genetic covariance matrix.                        | Yes        |
 | `--pi`         | Target column name for trait selection (required for `--pick`). | Yes    |
 | `--Q`          | Number of non-target traits to select (default: 30).      | No         |
+
+**Note**: The `--bin` or `--con` can be used concurrently with `--pick` to perform trait selection optimization during phenotype analysis.
 
 ### Covariance Matrix Arguments
 | Argument             | Description                                                     | Required? |
