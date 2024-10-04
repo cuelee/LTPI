@@ -64,7 +64,7 @@ Provide the required input arguments based on your analysis type. Optional param
 
 <br><br>
 
-## Arguments
+## Input Arguments
 
 ### Core Arguments
 
@@ -177,7 +177,7 @@ python LTPI.py --con ./example/quantitative_input.txt --gencov ./example/genetic
 
 ### Example 3: Trait Selection 
 ```bash
-python LTPI.py --pick --pi trait_C --gencov ./example/genetic_covariance_con.txt --out ./results/test_pick
+python LTPI.py --pick --pi trait_C --gencov ./example/genetic_covariance_bin.txt --out ./results/test_pick
 ```
 
 <br><br>
