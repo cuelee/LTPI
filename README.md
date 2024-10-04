@@ -1,6 +1,6 @@
 # LTPI 
 
-`LTPI`, **L**iability **T**hreshold model based **P**henotype **I**mputation, is a statistical framework for predicting the genetic liability of target diseases by leveraging related phenotypes. It integrates phenotypic data from electronic health records (EHR) using the GHK algorithm and maximum likelihood estimation. LTPI’s automated trait-selection algorithm enhances the accuracy of disease risk prediction.
+`LTPI` (**L**iability **T**hreshold-based **P**henotype **I**mputation) is a statistical framework for predicting genetic liability of diseases by leveraging related phenotypes. It integrates EHR data using the GHK algorithm and maximum likelihood estimation, with automated trait-selection to improve risk prediction accuracy.
 
 <br><br>
 
