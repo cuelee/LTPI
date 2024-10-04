@@ -115,7 +115,7 @@ Provide the required input arguments based on your analysis type. Optional param
 ### Output Control
 | Argument       | Description                                           | Default   |
 |----------------|-------------------------------------------------------|-----------|
-| `--out`        | Prefix for output files.                              | `LTPI`    |
+| `--out`        | Prefix for output files.                              | LTPI      |
 
 <br><br>
 
