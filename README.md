@@ -35,12 +35,14 @@ cd LTPI
 <br><br>
 
 ## Usage
-Run `LTPI` with one of the available analysis modes by providing the required input arguments for your analysis. There are three main analysis modes:
-1. **Binary phenotype input (`--bin`)**
-2. **Continuous phenotype input (`--con`)**
-3. **Trait selection optimization (`--pick`)**
 
-You can customize the analysis by using various optional parameters, such as specifying covariance matrices, optimizing trait selection, and applying covariance shrinkage.
+`LTPI` can be run in three main modes depending on your input data:
+
+1. **Binary phenotype analysis** (`--bin`)
+2. **Continuous phenotype analysis** (`--con`)
+3. **Trait selection analysis using ATSA** (`--pick`)
+
+Provide the required input arguments based on your analysis type. Optional parameters, such as covariance matrices and analysis-specific parameters, can further adjust your analysis.
 
 <br><br>
 
