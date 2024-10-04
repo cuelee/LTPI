@@ -76,6 +76,8 @@ Provide the required input arguments based on your analysis type. Optional param
 | `--gencov`     | Path to genetic covariance matrix.                       | Yes        |
 | `--envcov`     | Path to environmental covariance matrix.                 | Optional   |
 
+**Note**: The `--bin` can be used concurrently with `--pick` to perform trait selection optimization during phenotype analysis.
+
 #### Continuous Phenotype Analysis Input
 | Argument       | Description                                             | Required?  |
 |----------------|---------------------------------------------------------|------------|
@@ -83,6 +85,8 @@ Provide the required input arguments based on your analysis type. Optional param
 | `--bout`       | Same as the `--out` argument used in the `--bin` analysis. | Yes     |
 | `--gencov`     | Path to genetic covariance matrix.                       | Yes        |
 | `--envcov`     | Path to environmental covariance matrix.                 | Optional   |
+
+**Note**: The `--con` can be used concurrently with `--pick` to perform trait selection optimization during phenotype analysis.
 
 #### ATSA analysis Option (Optimization with `--pick`)
 | Argument       | Description                                               | Required?  |
