@@ -78,7 +78,7 @@ Provide the required input arguments based on your analysis type. Optional param
 |----------------------|-----------------------------------------------------------------|-----------|
 | `--gencov`           | Path to genetic covariance matrix.                              | Yes       |
 | `--envcov`           | Path to environmental covariance matrix.                        | Optional  |
-| `--shrink`           | Apply covariance shrinkage: G for GENCOV, E for ENVCOV, B for both. | Optional  |
+| `--shrink`           | Apply covariance shrinkage: G for `gencov`, E for `envcov`, B for both. | Optional  |
 | `--shrink_target`    | Target condition number for covariance shrinkage (default: 1.5).| No        |
 
 **Note**: When `--envcov` is not provided, `LTPI` assumes the environmental covariance matrix (`envcov`) by transforming the genetic covariance matrix (`gencov`).
@@ -91,7 +91,7 @@ Provide the required input arguments based on your analysis type. Optional param
 | Argument         | Description                                                    | Required?  |
 |------------------|----------------------------------------------------------------|------------|
 | `--rint`         | Apply rank-based inverse normal transformation on LTPI scores. | No         |
-| `--nsample_main` | Number of samples for the GHK algorithm.                       | 50000      |
+| `--nsample`      | Number of samples for the GHK algorithm.                       | 50000      |
 | `--r2`           | Threshold value for ATSA analysis.                             | 0.0        |
 
 <br><br>

@@ -103,7 +103,7 @@ parser.add_argument('--shrink_target', default=1.5, type=float,
                     help='Target condition number for covariance shrinkage (default: 1.5).')
 
 # Parameters specific to GHK algorithm
-parser.add_argument('--nsample_main', default=50000, type=int,
+parser.add_argument('--nsample', default=50000, type=int,
                     help='Number of samples for the GHK algorithm (default: 50K).')
 
 # Parameters specific to R2 selection (ATSA)

@@ -355,7 +355,7 @@ def LTPI_GHK(args):
     prev = np.array([args.prev[t] for t in binary_traits], dtype=float)
     gencov = np.asarray(args.GENCOV)
     envcov = np.asarray(args.ENVCOV)
-    sample_size = args.nsample_main
+    sample_size = args.nsample
     run_rint = args.rint
     key2t = np.unique(binary_phenotype['keys'])
     
