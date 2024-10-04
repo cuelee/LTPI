@@ -1,7 +1,7 @@
 # LTPI: Liability Threshold Model for Phenotype Imputation
 
 `LTPI` is a statistical framework for predicting the genetic liability of target diseases by leveraging related phenotypes. It integrates phenotypic data from electronic health records (EHR) using the GHK algorithm and maximum likelihood estimation. LTPI’s automated trait-selection algorithm enhances the accuracy of disease risk prediction.
-
+<br><br>
 ## Table of Contents
 1. [Overview](#overview)
 2. [Installation](#installation)
@@ -9,7 +9,7 @@
 4. [Input Arguments](#input-arguments)
 5. [Analysis Modes](#analysis-modes)
 6. [Examples](#examples)
-
+<br><br>
 ## Overview
 `LTPI` provides three different analysis modes:
 - **Binary phenotype analysis** (`--bin`)
@@ -20,14 +20,14 @@
 - Evaluation of expected genetic liability using GHK algorithm and maximum likelihood
 - Covariance shrinkage to improve the model's performance
 - Automatic trait selection based on `r2_o` criteria
-
+<br><br>
 ## Installation
 To install `LTPI`, clone the repository and ensure all dependencies are installed:
 ```bash
 git clone https://github.com/your-repo/LTPI.git
 cd LTPI
 ```
-
+<br><br>
 ## Usage
 Run `LTPI` with one of the available analysis modes by providing the required input arguments for your analysis. There are three main analysis modes:
 1. **Binary phenotype input (`--bin`)**
@@ -35,7 +35,7 @@ Run `LTPI` with one of the available analysis modes by providing the required in
 3. **Trait selection optimization (`--pick`)**
 
 You can customize the analysis by using various optional parameters, such as specifying covariance matrices, optimizing trait selection, and applying covariance shrinkage.
-
+<br><br>
 ## Input Arguments
 ### Output Arguments
 | Argument       | Description                                | Default   |
@@ -90,7 +90,7 @@ You can customize the analysis by using various optional parameters, such as spe
 | Argument   | Description                                    | Default |
 |------------|------------------------------------------------|---------|
 | `--r2`     | `r2_o` threshold for ATSA.                     | 0.0     |
-
+<br><br>
 ## Analysis Modes
 `LTPI` offers three distinct modes of analysis, depending on the input data type:
 
@@ -104,7 +104,7 @@ This mode handles continuous phenotype data. It requires a reference to a previo
 
 ### 3. Trait Selection (`--pick`)
 In this mode, `LTPI` optimizes the selection of non-target traits based on the `r2_o` criterion. It is useful for identifying key features that are most relevant to the target phenotype.
-
+<br><br>
 ## Examples
 
 The `LTPI` package includes a runnable example script called `runexample.bash`, which demonstrates how to use the different analysis modes provided by `LTPI`. This script allows you to easily test the package and explore its functionality.
@@ -132,6 +132,6 @@ python LTPI.py --con ./example/quantitative_input.txt --gencov ./example/genetic
 ```bash
 python LTPI.py --pick --pi trait_C --gencov ./example/genetic_covariance_con.txt --out ./results/test_pick
 ```
-
+<br><br>
 ## Contact
 For any issues or questions, feel free to raise an issue on GitHub or contact the author.
