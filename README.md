@@ -87,9 +87,10 @@ Provide the required input arguments based on your analysis type. Optional param
 #### ATSA analysis Option (Optimization with `--pick`)
 | Argument       | Description                                               | Required?  |
 |----------------|-----------------------------------------------------------|------------|
-| `--pick`       | Optimize non-target trait selection based on `r2_o`.       | No         |
+| `--pick`       | Optimize non-target trait selection based on `r2_o`.      | No         |
+| `--gencov`     | Path to genetic covariance matrix.                        | Yes        |
 | `--pi`         | Target column name for trait selection (required for `--pick`). | Yes    |
-| `--Q`          | Number of non-target traits to select (default: 30).       | No         |
+| `--Q`          | Number of non-target traits to select (default: 30).      | No         |
 
 ### Covariance Matrix Arguments
 | Argument             | Description                                                     | Required? |
