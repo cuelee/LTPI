@@ -110,7 +110,7 @@ Covariance shrinkage is often necessary because covariance matrices can be non-p
 ### Optional Arguments
 | Argument         | Description                                                    | Default  |
 |-------------------------|----------------------------------------------------------------|------------|
-| `--rint`         | Apply rank-based inverse normal transformation on LTPI scores. | No         |
+| `--rint`         | Apply rank-based inverse normal transformation on LTPI scores. | False         |
 | `--nsample`      | Number of samples for the GHK algorithm.                       | 50000      |
 | `--r2`           | Threshold value for ATSA analysis.                             | 0.0        |
 
