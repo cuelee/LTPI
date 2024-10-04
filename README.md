@@ -103,7 +103,7 @@ Provide the required input arguments based on your analysis type. Optional param
 **Note**: When `--envcov` is not provided, `LTPI` assumes the environmental covariance matrix (`envcov`) by transforming the genetic covariance matrix (`gencov`).
 
 **Why Covariance Shrinkage?**
-Covariance shrinkage is often necessary because covariance matrices can be non-positive semi-definite (non-PSD) due to bias, error, or subtle covariances. This issue is more pronounced when working with a large number of traits, which reduces the stability of the LTPI analysis. Shrinking the covariance matrix ensures that the condition number is within a stable range, improving analysis reliability. A shrinkage with a condition number less than 10 is recommended for optimal performance.
+Covariance shrinkage is often necessary because covariance matrices can be non-positive semi-definite (non-PSD) due to bias, error, or subtle correlations at the boundary between PSD and non-PSD among pairs of multiple traits. This issue is more pronounced when working with a large number of traits, which reduces the stability of the LTPI analysis. Shrinking the covariance matrix ensures that the condition number is within a stable range, improving analysis reliability. A shrinkage with a condition number less than 10 is recommended for optimal performance.
 
 <br><br>
 
