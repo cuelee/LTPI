@@ -136,6 +136,8 @@ A tab-delimited text file where the first row lists trait IDs. The remaining row
 ### 3. Prevalence File (`--prevalence`)
 A two-column tab-delimited file. The first column, `TID`, contains trait IDs, and the second column, `prev`, contains prevalence values.
 
+**Note**: The `--prevalence` file is required only for binary traits.
+
 <br><br>
 
 ## Analysis Modes
