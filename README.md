@@ -1,4 +1,5 @@
-# LTPI: Liability Threshold Model for Phenotype Imputation
+# LTPI 
+Liability Threshold model for Phenotype Imputation
 
 `LTPI` is a statistical framework for predicting the genetic liability of target diseases by leveraging related phenotypes. It integrates phenotypic data from electronic health records (EHR) using the GHK algorithm and maximum likelihood estimation. LTPI’s automated trait-selection algorithm enhances the accuracy of disease risk prediction.
 
