@@ -89,7 +89,7 @@ Provide the required input arguments based on your analysis type. Optional param
 
 #### Rank-Based Inverse Normal Transformation
 | Argument         | Description                                                    | Required?  |
-|------------------|----------------------------------------------------------------|------------|
+|-------------------------|----------------------------------------------------------------|------------|
 | `--rint`         | Apply rank-based inverse normal transformation on LTPI scores. | No         |
 | `--nsample`      | Number of samples for the GHK algorithm.                       | 50000      |
 | `--r2`           | Threshold value for ATSA analysis.                             | 0.0        |
