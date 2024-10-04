@@ -183,4 +183,8 @@ python LTPI.py --pick --pi trait_C --gencov ./example/genetic_covariance_con.txt
 <br><br>
 
 ## Contact
-For any issues or questions, feel free to raise an issue on GitHub or contact the author (Cue Hyunkyu Lee: [Email](mailto:hl3565@cumc.columbia.edu?subject=[GitHub]%20LTPI)).
+For support, inquiries, or further information, please submit an issue on the official GitHub repository or contact the developer:
+
+**Cue Hyunkyu Lee**  
+Columbia University  
+Email: [hl3565@cumc.columbia.edu](mailto:hl3565@cumc.columbia.edu?subject=[GitHub]%20LTPI%20Inquiry)
