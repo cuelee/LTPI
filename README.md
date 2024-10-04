@@ -99,6 +99,20 @@ You can customize the analysis by using various optional parameters, such as spe
 |------------|------------------------------------------------|---------|
 | `--r2`     | `r2_o` threshold for ATSA.                     | 0.0     |
 
+<br><br>
+
+## Input File Formats
+
+This section describes the required input file formats for the various `LTPI` arguments.
+
+### 1. Phenotype Matrix (`--bin`, `--con`)
+The phenotype matrix is a tab-delimited text file with a header. The first column represents the individual ID with the column name `IID`. Each subsequent column contains trait names as headers, followed by the respective phenotypic values for each individual.
+
+### 2. Covariance Matrix (`--gencov`, `--envcov`)
+The covariance matrix is a tab-delimited text file where the first row contains trait IDs, and the remaining rows represent the covariance values. For `n` traits, the matrix should be an `n x n` matrix with `n + 1` rows (including the header) and `n` columns.
+
+### 3. Prevalence File (`--prevalence`)
+The prevalence file is a two-column tab-delimited file with a header. The first column, `TID`, contains the trait IDs, and the second column, `prev`, contains the corresponding prevalence values.
 
 <br><br>
 
@@ -141,7 +155,7 @@ python LTPI.py --bin .example/binary_input.txt --gencov ./example/genetic_covari
 python LTPI.py --con ./example/quantitative_input.txt --gencov ./example/genetic_covariance_con.txt --bout ./results/test_bin --out ./results/test_con
 ```
 
-### Example 3: Trait Selection Optimization
+### Example 3: Trait Selection 
 ```bash
 python LTPI.py --pick --pi trait_C --gencov ./example/genetic_covariance_con.txt --out ./results/test_pick
 ```
