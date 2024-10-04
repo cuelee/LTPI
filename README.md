@@ -1,85 +1,131 @@
-# LTPI 
+# LTPI: Liability Threshold Model for Phenotype Imputation
 
-`LTPI` is a command line tool to derive new phenotypes for a target disease by combining genetic relatedness information with phenotypic information.
+`LTPI` is a statistical framework designed for predicting the genetic liability of a target disease by leveraging related phenotypes. The tool integrates phenotypic information from electronic health records (EHR) and uses advanced techniques such as the GHK algorithm, maximum likelihood estimation, and optimization based on trait selection to deliver accurate disease risk probabilities.
 
-## Getting Started
+## Table of Contents
+1. [Overview](#overview)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Input Arguments](#input-arguments)
+5. [Analysis Modes](#analysis-modes)
+6. [Examples](#examples)
 
-### Installation
+## Overview
+`LTPI` provides three different analysis modes:
+- **Binary phenotype analysis** (`--bin`)
+- **Continuous phenotype analysis** (`--con`)
+- **Trait selection optimization** (`--pick`)
 
-To install `LTPI`, clone this repository using the following commands:
+### Included Features:
+- Monte Carlo-based sampling for posterior estimation
+- Covariance shrinkage to improve covariance matrix conditioning
+- Optimization of non-target trait selection based on `r2_o` criteria
 
+## Installation
+To install `LTPI`, clone the repository and ensure all dependencies are installed:
 ```bash
-git clone https://github.com/cuelee/LTPI.git
+git clone https://github.com/your-repo/LTPI.git
 cd LTPI
 ```
 
-### Dependencies
+## Usage
+Run `LTPI` with one of the available analysis modes by providing the required input arguments for your analysis. There are three main analysis modes:
+1. **Binary phenotype input (`--bin`)**
+2. **Continuous phenotype input (`--con`)**
+3. **Trait selection optimization (`--pick`)**
 
-`LTPI` requires the following Python dependencies to be installed:
+You can customize the analysis by using various optional parameters, such as specifying covariance matrices, optimizing trait selection, and applying covariance shrinkage.
 
-- Python 3.x
-- pandas
-- numpy
-- numba
-- scipy
-- scikit-learn
+## Input Arguments
+### Output Arguments
+| Argument       | Description                                | Default   |
+|----------------|--------------------------------------------|-----------|
+| `--out`        | Output file prefix.                        | `LTPI`    |
 
-You can install these dependencies using pip or conda.
+### Test Mode Arguments
+#### Binary Phenotype Input
+| Argument       | Description                                             | Required?  |
+|----------------|---------------------------------------------------------|------------|
+| `--bin`        | Path to the binary phenotype input file.                 | Yes        |
+| `--prevalence` | Path to disease prevalence information.                  | Yes        |
+| `--gencov`     | Path to genetic covariance matrix.                       | Yes        |
+| `--envcov`     | Path to environmental covariance matrix.                 | Optional   |
 
-### Creating the LTPI Environment with Conda
+#### Continuous Phenotype Input
+| Argument       | Description                                             | Required?  |
+|----------------|---------------------------------------------------------|------------|
+| `--con`        | Path to the quantitative phenotype input file.           | Yes        |
+| `--bout`       | Same as the `--out` argument used in the `--bin` test.   | Yes        |
+| `--gencov`     | Path to genetic covariance matrix.                       | Yes        |
+| `--envcov`     | Path to environmental covariance matrix.                 | Optional   |
 
-If users prefer to use conda, they can define the LTPI environment using the following command:
+#### Trait Selection (Optimization with `--pick`)
+| Argument       | Description                                               | Required?  |
+|----------------|-----------------------------------------------------------|------------|
+| `--pick`       | Optimize non-target trait selection based on `r2_o`.       | No         |
+| `--pi`         | Target column name for trait selection (required for `--pick`). | Yes    |
+| `--Q`          | Number of non-target traits to select (default: 30).       | No         |
 
+### Rank-Based Inverse Normal Transformation
+| Argument       | Description                                               | Required?  |
+|----------------|-----------------------------------------------------------|------------|
+| `--rint`       | Apply rank-based inverse normal transformation on LTPI scores. | No     |
+
+### Covariance Matrix Arguments
+| Argument          | Description                                                     | Required? |
+|-------------------|-----------------------------------------------------------------|-----------|
+| `--gencov`        | Path to genetic covariance matrix.                              | Yes       |
+| `--envcov`        | Path to environmental covariance matrix.                        | Optional  |
+| `--shrink`        | Apply covariance shrinkage: G for GENCOV, E for ENVCOV, B for both. | Optional  |
+| `--shrink_target` | Target condition number for covariance shrinkage (default: 1.5).| No        |
+
+### Parameters Specific to GHK Algorithm
+| Argument           | Description                                       | Default |
+|--------------------|---------------------------------------------------|---------|
+| `--nsample_main`   | Number of samples for the GHK algorithm.          | 50000   |
+
+### Parameters Specific to R2 Selection (ATSA)
+| Argument   | Description                                    | Default |
+|------------|------------------------------------------------|---------|
+| `--r2`     | `r2_o` threshold for ATSA.                     | 0.0     |
+
+## Analysis Modes
+`LTPI` provides three modes of analysis, depending on the input data type:
+
+### 1. Binary Phenotype Input (`--bin`)
+This mode is used when the input phenotype data is binary. It requires the path to the binary phenotype input file, disease prevalence data, and covariance matrices.
 ```bash
-conda env create -f environment.yml
-conda activate LTPI
+python LTPI.py --bin <binary_input_file> --gencov <genetic_covariance_file> --prevalence <prevalence_file> --out <output_prefix>
 ```
 
-## Running LTPI
-
-After installing the dependencies, you can start using `LTPI` by running:
-
+### 2. Continuous Phenotype Input (`--con`)
+This mode is used for continuous phenotype data. It requires the path to the quantitative input file and a reference to the output from a previous binary analysis (`--bout`).
 ```bash
-./LTPI.py -h
+python LTPI.py --con <quantitative_input_file> --gencov <genetic_covariance_file> --bout <binary_output_prefix> --out <output_prefix>
 ```
 
-This command displays the help information and available commands.
-
-## Updating LTPI
-
-To update `LTPI` to the latest version, navigate to your `LTPI/` directory and run:
-
+### 3. Trait Selection (`--pick`)
+In this mode, `LTPI` optimizes non-target trait selection based on the `r2_o` criterion. This mode is useful for feature selection in large-scale genetic datasets.
 ```bash
-git pull
+python LTPI.py --pick --pi <target_trait> --gencov <genetic_covariance_file> --out <output_prefix>
 ```
 
-If `LTPI` is already up to date, the output will be:
+## Examples
 
+### Example 1: Binary Phenotype Analysis
+```bash
+python LTPI.py --bin ./example/binary_input.txt --gencov ./example/genetic_covariance_bin.txt --prevalence ./example/prevalence.txt --out ./results/test_bin
 ```
-Already up to date.
+
+### Example 2: Continuous Phenotype Analysis
+```bash
+python LTPI.py --con ./example/quantitative_input.txt --gencov ./example/genetic_covariance_con.txt --bout ./results/test_bin --out ./results/test_con
 ```
 
-## For First-Time Users
+### Example 3: Trait Selection Optimization
+```bash
+python LTPI.py --pick --pi trait_C --gencov ./example/genetic_covariance_con.txt --out ./results/test_pick
+```
 
-New users can find an executable example file in the `LTPI/` directory, named `runexample.bash`. This example provides a practical guide to using `LTPI`.
-
-## Citation
-
-If you utilize `LTPI` in your research, please cite the following paper:
-
-LEE, C. H., Khan, A., Weng, C., Buxbaum, J. D., Kiryluk, K., Ionita-Laza, I., "Liability threshold model-based disease risk prediction based on Electronic Health Record phenotypes," Under Review.
-
-## Support
-
-For any issues or queries regarding `LTPI`, feel free to reach out via email: hl3565@cumc.columbia.edu
-
-## License 
-
-`LTPI` is released under the MIT License. See the LICENSE file for more details.
-
-## Authors
-
-- Cue Hyunkyu Lee, Columbia University Irving Medical Center
-
----
-
+## Contact
+For any issues or questions, feel free to raise an issue on GitHub or contact the author.

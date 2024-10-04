@@ -240,8 +240,7 @@ def gen_Lsub(U, E, omega_S, max_retries = 5):
     
 def ghk_algorithm(
     log, U, E, prev, key2test, 
-    N_samp=100000, 
-    ncores=1):
+    N_samp=100000):
     """
     U: genetic covariance
     tval: inverse cdf of prevalence
@@ -249,7 +248,6 @@ def ghk_algorithm(
 
     log.log('\nRunning GHK algorithm...\n')
 
-    N = N_samp
     ns = len(prev)
     
     if np.sum(prev < 0.01) > 0:
@@ -358,7 +356,6 @@ def LTPI_GHK(args):
     gencov = np.asarray(args.GENCOV)
     envcov = np.asarray(args.ENVCOV)
     sample_size = args.nsample_main
-    ncores = args.ncore
     run_rint = args.rint
     key2t = np.unique(binary_phenotype['keys'])
     
@@ -366,7 +363,7 @@ def LTPI_GHK(args):
     start_time = time.time()
         
     # Generate samples using GHK algorithm
-    samples_df = ghk_algorithm(log=log, U=gencov, E=envcov, prev=prev, key2test=key2t, N_samp=sample_size, ncores=ncores)
+    samples_df = ghk_algorithm(log=log, U=gencov, E=envcov, prev=prev, key2test=key2t, N_samp=sample_size)
     samples_df.index.names = ['CONF']
     
     # Prepare sample information

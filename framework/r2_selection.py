@@ -10,6 +10,7 @@ from sklearn.covariance import ShrunkCovariance, shrunk_covariance
 def contribution_based_greedy_algorithm(gencov = None, 
                                         PI = None, 
                                         N = 30, 
+                                        r2_thres = 0.0,
                                         shrinkages = np.round(np.linspace(0.01, 0.99, num = 12),2)):
     
     def gen_R2(gencov, PI, O):
@@ -104,25 +105,56 @@ def contribution_based_greedy_algorithm(gencov = None,
             summary_COND[shrinkage] = S.CN
         return(summary_R2, summary_TID, summary_COND)
     
-    def select_best_shrinkage(summary_R2, summary_TID, summary_COND):
+    def select_best_shrinkage(summary_R2, summary_COND, summary_TID, r2_thres):
         def test_non_decreasing(l):
             l = np.array(l)
-            if len(l) < 2:
-                return(True)
-            
-            ind = np.array(range(len(l)-1))
-            if np.all(l[ind] < l[ind+1]):
-                return(True)
-            else:
-                return(False)
+            return all(np.diff(l) >= 0)  # Simplified version using np.diff
 
         def test_R2_sanity(l):
             l = np.array(l)
-            if np.all((l >= 0) & (l <= 1)):
-                return(True)
-            else:
-                return(False)
-        
+            return np.all((l >= 0) & (l <= 1))
+
+        def filter_incremental_R2(S_R2, S_TID, S_COND, r2_thres):
+            def update_bool_series(A):
+                # Initialize j as True for the first index
+                j = True
+
+                # Iterate through indices of A
+                for i in range(len(A)):
+                    # If A[i] is False, set j to False for all indices greater than i
+                    if not A.iloc[i]:
+                        j = False
+                    # Update A[j] based on the current value of j
+                    A.iloc[i] = j
+
+                return A
+            
+            """
+            Filters a Series of R2 values based on incremental R2 values with a threshold greater than 1e-3.
+            The first value is always included because diff() doesn't apply to it.
+
+            Args:
+            summary_R2.loc[:, best_shrinkage] (pd.Series): Series containing R2 values.
+            summary_TID.loc[:, best_shrinkage] (pd.Series): Series containing trait IDs.
+            summary_COND.loc[:, best_shrinkage] (pd.Series): Series containing corresponding COND.
+
+            Returns:
+            filtered_S: A Series with filtered R2 values based on the specified criterion.
+            """
+            valid_indices = S_R2.diff().dropna() > r2_thres
+            valid_indices.loc[0] = True if S_R2.loc[0] > r2_thres else False
+            valid_indices.sort_index(inplace = True)
+            valid_indices = update_bool_series(valid_indices)
+            
+            best_S = pd.DataFrame(
+                {'R2': S_R2.loc[valid_indices].dropna().to_numpy(float),
+                 'COND': S_COND.loc[valid_indices].dropna().to_numpy(float)},
+                index = S_TID.loc[valid_indices].dropna().to_numpy(str)
+            )
+            
+            return best_S
+
+        # Apply filters to each column and then test for non-decreasing and sanity
         test_ND = summary_R2.apply(test_non_decreasing, axis=0, raw=True)
         test_sanity = summary_R2.apply(test_R2_sanity, axis=0, raw=True)    
 
@@ -130,14 +162,16 @@ def contribution_based_greedy_algorithm(gencov = None,
             raise ValueError('Matrix Regularization failed\nCause:\n\t1.R2 is not ranged between (0,1).\n\tSelected R2 is not non-decreasing vector.\n\n We suggest the followings:\n\t1. check the sanity of covariance matrix\n\tor 2. Use option shrinkages with values higher than 0.9')
 
         best_shrinkage = summary_R2.columns[test_ND & test_sanity][0]
-
-        best_S = pd.DataFrame(
-            {'R2':summary_R2.loc[:,best_shrinkage].to_numpy(float),
-             'COND':summary_COND.loc[:,best_shrinkage].to_numpy(float)}
-            , index = summary_TID.loc[:,best_shrinkage].to_numpy(str))
-        return(best_S, best_shrinkage)
-
-   
+        
+        best_S = filter_incremental_R2(
+            summary_R2.loc[:, best_shrinkage].dropna(), 
+            summary_COND.loc[:, best_shrinkage].dropna(), 
+            summary_TID.loc[:, best_shrinkage].dropna(),
+            r2_thres = r2_thres
+        )
+        
+        return best_S, best_shrinkage    
+       
     if not (isinstance(shrinkages, (np.ndarray,list) ) & (np.array(shrinkages).dtype == 'float')):
         raise ValueError('Shrinkages should be a float vector')
     else:
@@ -157,13 +191,13 @@ def contribution_based_greedy_algorithm(gencov = None,
         return(np.array([PI]), None, None, None)
         
     summary_R2, summary_TID, summary_COND = test_multiple_shrinkages(shrinkages, gencov, PI, N)
-    best_S, best_shrinkage = select_best_shrinkage(summary_R2, summary_TID, summary_COND)
+    best_S, best_shrinkage = select_best_shrinkage(summary_R2, summary_TID, summary_COND, r2_thres)
     selected_traits = np.insert(best_S.index,0,PI)
     summary_data = {'R2':summary_R2, 'TID':summary_TID, 'COND':summary_COND, 'shrinkages':shrinkages}
     
     return(selected_traits, best_S, best_shrinkage, summary_data)
 
-def ATSA(Gennetic_covariance, PI, N = 5, shrinkage = np.round(np.linspace(0.01, 0.99, num = 12),2)):
+def ATSA(Gennetic_covariance, PI, N = 5, r2_thres = 0.0, shrinkage = np.round(np.linspace(0.01, 0.99, num = 12),2)):
     """
     Automatic Trait Selection Algorithm(ATSA)
     The algorithm employs genetic covariance and iterative selection to identify the most relevant non-target traits that significantly influence the genetic variance of the target disease. By iteratively selecting traits, the algorithm aims to build a trait subset that maximizes the impact of the target trait in prediction models. The algorithm is designed to handle datasets with a large number of traits efficiently.
@@ -218,7 +252,7 @@ def ATSA(Gennetic_covariance, PI, N = 5, shrinkage = np.round(np.linspace(0.01, 
     check_numeric_value(N)
     validate_numeric_vector(shrinkage)
     
-    selected_traits, best_S, best_shrinkage, summary_data = contribution_based_greedy_algorithm(Gennetic_covariance,PI,N,shrinkage)
+    selected_traits, best_S, best_shrinkage, summary_data = contribution_based_greedy_algorithm(Gennetic_covariance,PI,N,r2_thres,shrinkage)
     
     return(selected_traits, best_S, best_shrinkage, summary_data)
 
@@ -236,6 +270,7 @@ def run_ATSA(args):
         args.log.log(f"Adjusted N to be {N} due to the size of Gennetic_covariance, which is {Gennetic_covariance.shape[0]} x {Gennetic_covariance.shape[1]}.")
     
     shrinkage = args.shrinkage
-    selected_traits, best_S, best_shrinkage, summary_data = ATSA(Gennetic_covariance, PI, N, shrinkage)
+    r2_thres = args.r2
+    selected_traits, best_S, best_shrinkage, summary_data = ATSA(Gennetic_covariance, PI, N, r2_thres, shrinkage)
     
     return selected_traits, best_S, best_shrinkage, summary_data

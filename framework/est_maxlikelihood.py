@@ -132,7 +132,6 @@ def LTPI_MLE(args):
     configuration_info = estimate_NA_GSE(args.conf)
     sample_info = args.samp_bin
     run_rint = args.rint
-    ncore = args.ncore
     
     # starting time
     time_var = time.time()
