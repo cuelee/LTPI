@@ -1,6 +1,6 @@
 # LTPI: Liability Threshold Model for Phenotype Imputation
 
-`LTPI` is a statistical framework designed for predicting the genetic liability of a target disease by leveraging related phenotypes. The tool integrates phenotypic information from electronic health records (EHR) and uses advanced techniques such as the GHK algorithm, maximum likelihood estimation, and optimization based on trait selection to deliver accurate disease risk probabilities.
+`LTPI` is a statistical framework for predicting the genetic liability of target diseases by leveraging related phenotypes. It integrates phenotypic data from electronic health records (EHR) using the GHK algorithm and maximum likelihood estimation. LTPI’s automated trait-selection algorithm enhances the accuracy of disease risk prediction.
 
 ## Table of Contents
 1. [Overview](#overview)
@@ -17,9 +17,9 @@
 - **Trait selection optimization** (`--pick`)
 
 ### Included Features:
-- Monte Carlo-based sampling for posterior estimation
-- Covariance shrinkage to improve covariance matrix conditioning
-- Optimization of non-target trait selection based on `r2_o` criteria
+- Evaluation of expected genetic liability using GHK algorithm and maximum likelihood
+- Covariance shrinkage to improve the model's performance
+- Automatic trait selection based on `r2_o` criteria
 
 ## Installation
 To install `LTPI`, clone the repository and ensure all dependencies are installed:
@@ -111,6 +111,17 @@ python LTPI.py --pick --pi <target_trait> --gencov <genetic_covariance_file> --o
 ```
 
 ## Examples
+
+The `LTPI` package includes a runnable example script called `runexample.bash`, which demonstrates how to use the different analysis modes provided by `LTPI`. This script allows you to easily test the package and explore its functionality.
+
+### Running the Example
+
+To run the example, simply execute the `runexample.bash` script in the terminal:
+```bash
+bash runexample.bash
+```
+
+This will run all three modes of analysis (binary, continuous, and trait selection) using example data included in the package.
 
 ### Example 1: Binary Phenotype Analysis
 ```bash
