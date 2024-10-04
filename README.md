@@ -169,17 +169,18 @@ This will run all three modes of analysis (binary, continuous, and trait selecti
 
 ### Example 1: Binary Phenotype Analysis
 ```bash
-python LTPI.py --bin .example/binary_input.txt --gencov ./example/genetic_covariance_bin.txt --prevalence ./example/prevalence.txt --out ./results/test_bin
+python LTPI.py --bin example/binput.txt --gencov example/genetic_covariance_bin.txt --prevalence example/prevalence.txt --out test_bin
 ```
 
 ### Example 2: Continuous Phenotype Analysis
 ```bash
-python LTPI.py --con ./example/quantitative_input.txt --gencov ./example/genetic_covariance_con.txt --bout ./results/test_bin --out ./results/test_con
+python LTPI.py --con example/qinput.txt --gencov example/genetic_covariance_con.txt --bout test_bin --out test_con
+
 ```
 
 ### Example 3: Trait Selection 
 ```bash
-python LTPI.py --pick --pi trait_C --gencov ./example/genetic_covariance_bin.txt --out ./results/test_pick
+python LTPI.py --pick --pi trait_C --gencov example/genetic_covariance_bin.txt --out test_pick
 ```
 
 <br><br>
