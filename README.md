@@ -27,7 +27,7 @@
 `LTPI` operates through three analysis modes:
 
 1. **Binary phenotype analysis** (`--bin`): Merges all binary traits to estimate genetic liability.
-2. **Continuous phenotype analysis** (`--con`): Combines the results from `--bin` and `--pick` with continuous traits to generate the final LTPI score.
+2. **Continuous phenotype analysis** (`--con`): Combines the results from `--bin` with continuous traits to generate the final LTPI score.
 3. **Trait selection optimization** (`--pick`): Identifies and selects the most important traits based on the `r2_o` criterion, refining the analysis for optimal results.
 
 **Important:** Two steps—`--bin` and `--con`—must be run sequentially to obtain the final LTPI score. Skipping any step may result in incomplete analysis. `--pick` is optional, but it usually improves the performance.
