@@ -23,15 +23,20 @@
 ---
 
 ## Overview
-`LTPI` operates in three main analysis modes:
-- **Binary phenotype analysis** (`--bin`)
-- **Continuous phenotype analysis** (`--con`)
-- **Trait selection optimization** (`--pick`)
+
+`LTPI` is a statistical framework designed to predict genetic liability for diseases by integrating both binary and continuous traits. 
+
+1. **Binary phenotype analysis** (`--bin`): Merges all binary traits to estimate genetic liability.
+2. **Continuous phenotype analysis** (`--con`): Combines the results from `--bin` and `--pick` with continuous traits to generate the final LTPI score.
+3. **Trait selection optimization** (`--pick`): Identifies and selects the most important traits based on the `r2_o` criterion, refining the analysis for optimal results.
+
+**Important:** Two steps—`--bin` and `--con`—must be run sequentially to obtain the final LTPI score. Skipping any step may result in incomplete analysis. `--pick` is optional, but it usually improves the performance.
 
 ### Key Features:
-- Predicts genetic liability using the GHK algorithm and maximum likelihood estimation.
-- Incorporates covariance shrinkage to improve model stability.
-- Implements automatic trait selection using the `r2_o` criterion.
+
+- **GHK Algorithm and Maximum Likelihood Estimation**: Predicts genetic liability using advanced statistical techniques.
+- **Covariance Shrinkage**: Ensures model stability by applying covariance shrinkage during analysis, particularly when working with many traits.
+- **Automated Trait Selection**: Utilizes the `r2_o` criterion to automatically select the most relevant non-target traits, enhancing prediction accuracy.
 
 ---
 
@@ -92,7 +97,7 @@ Specify the required core arguments for each mode and optional parameters like c
 #### Binary Phenotype Analysis
 | Argument       | Description                                             | Required?  |
 |----------------|---------------------------------------------------------|------------|
-| `--bin`        | Path to binary phenotype input file.                     | Yes        |
+| `--bin`        | Path to binary phenotype input file.                     |         |
 | `--prevalence` | Path to disease prevalence file.                         | Yes        |
 | `--gencov`     | Path to genetic covariance matrix.                       | Yes        |
 | `--envcov`     | Path to environmental covariance matrix.                 | Optional   |
@@ -100,7 +105,7 @@ Specify the required core arguments for each mode and optional parameters like c
 #### Continuous Phenotype Analysis
 | Argument       | Description                                             | Required?  |
 |----------------|---------------------------------------------------------|------------|
-| `--con`        | Path to continuous phenotype input file.                 | Yes        |
+| `--con`        | Path to continuous phenotype input file.                 |         |
 | `--bout`       | Output file from previous binary analysis.               | Yes        |
 | `--gencov`     | Path to genetic covariance matrix.                       | Yes        |
 | `--envcov`     | Path to environmental covariance matrix.                 | Optional   |
@@ -108,7 +113,7 @@ Specify the required core arguments for each mode and optional parameters like c
 #### Trait Selection (Optimization with `--pick`)
 | Argument       | Description                                               | Required?  |
 |----------------|-----------------------------------------------------------|------------|
-| `--pick`       | Optimize non-target trait selection based on `r2_o`.      | Yes         |
+| `--pick`       | Optimize non-target trait selection based on `r2_o`.      |          |
 | `--gencov`     | Path to genetic covariance matrix.                        | Yes        |
 | `--pi`         | Target column name for trait selection.                   | Yes        |
 | `--Q`          | Number of non-target traits to select (default: 30).      | No         |
