@@ -30,7 +30,7 @@ MASTHEAD = f"""
 * LTPI ({codename})
 * Version {__version__}
 * (C) 2024 Cue H. Lee, Columbia University
-* Unlicensed Software
+* MIT license
 ************************************************************
 """
 
