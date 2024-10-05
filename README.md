@@ -16,8 +16,8 @@
 5. [Input File Formats](#input-file-formats)
    - [Phenotype Matrix](#phenotype-matrix)
    - [Covariance Matrix](#covariance-matrix)
-   - [Prevalence of binary traits](#prevalence-of-binary-traits)
-6. [Output Files](#ouput-files)
+   - [Prevalence](#prevalence-of-binary-traits)
+6. [Output Files](#output-files)
 7. [Examples](#examples)
 8. [Contact](#contact)
 
