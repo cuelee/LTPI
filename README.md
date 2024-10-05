@@ -1,6 +1,6 @@
 # LTPI
 
-`LTPI` (**L**iability **T**hreshold-based **P**henotype **I**ntegration) is a statistical framework designed to predict genetic liability for diseases by leveraging related phenotypes in EHR. The risk score construction uses the GHK algorithm and maximum likelihood estimation, featuring automated trait-selection to enhance risk prediction accuracy.
+`LTPI` (**L**iability **T**hreshold-based **P**henotype **I**ntegration) is a statistical framework designed to predict genetic liability for diseases by leveraging related phenotypes in EHR. The risk score construction utilizes the GHK algorithm and maximum likelihood estimation, with efficacy that can be further enhanced through automated feature selection.
 
 ---
 
