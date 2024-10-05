@@ -34,7 +34,7 @@
 
 ### Key Features:
 
-- **GHK Algorithm and Maximum Likelihood Estimation**: Predicts genetic liability using advanced statistical techniques.
+- **GHK Algorithm and Maximum Likelihood Estimation**: Provides accurate genetic liability estimates.
 - **Covariance Shrinkage**: Enhances model stability by applying shrinkage to covariance matrices, especially when analyzing a large number of traits.
 - **Automated Trait Selection**: Utilizes the `r2_o` criterion to automatically select the most relevant non-target traits, enhancing prediction accuracy.
 
