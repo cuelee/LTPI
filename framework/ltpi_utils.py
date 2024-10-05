@@ -38,9 +38,9 @@ def read_prev(args, f):
 
 def read_bout(p):
     """Read the binary test output files."""
-    conf = pd.read_csv(f'{p}.conf', sep='\t', usecols=['CONF', 'EG', 'G_SE'], dtype={'CONF': str, 'EG': float, 'G_SE': float}, index_col=None)
+    conf = pd.read_csv(f'{p}.config_summary', sep='\t', usecols=['CONF', 'EG', 'G_SE'], dtype={'CONF': str, 'EG': float, 'G_SE': float}, index_col=None)
     conf.set_index('CONF', inplace=True)
-    samp = pd.read_csv(f'{p}.txt.gz', sep='\s+', usecols=['IID', 'LTPI', 'CONF'], dtype={'IID': str, 'LTPI': float, 'CONF': str}, index_col=None)
+    samp = pd.read_csv(f'{p}.ltpi_scores.gz', sep='\s+', usecols=['IID', 'LTPI', 'CONF'], dtype={'IID': str, 'LTPI': float, 'CONF': str}, index_col=None)
     samp.set_index('IID', inplace=True)
     return conf, samp
 
