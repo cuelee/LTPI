@@ -8,3 +8,6 @@ dependencies:
   - numba
   - scipy
   - scikit-learn
+  - pip
+  - pip:
+    - argparse
