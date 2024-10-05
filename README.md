@@ -97,7 +97,7 @@ Specify the required core arguments for each mode and optional parameters like c
 #### Binary Phenotype Analysis
 | Argument       | Description                                             | Required?  |
 |----------------|---------------------------------------------------------|------------|
-| `--bin`        | Path to binary phenotype input file.                     |         |
+| `--bin`        | Path to binary phenotype input file.                     | Yes        |
 | `--prevalence` | Path to disease prevalence file.                         | Yes        |
 | `--gencov`     | Path to genetic covariance matrix.                       | Yes        |
 | `--envcov`     | Path to environmental covariance matrix.                 | Optional   |
@@ -105,7 +105,7 @@ Specify the required core arguments for each mode and optional parameters like c
 #### Continuous Phenotype Analysis
 | Argument       | Description                                             | Required?  |
 |----------------|---------------------------------------------------------|------------|
-| `--con`        | Path to continuous phenotype input file.                 |         |
+| `--con`        | Path to continuous phenotype input file.                 | Yes        |
 | `--bout`       | Output file from previous binary analysis.               | Yes        |
 | `--gencov`     | Path to genetic covariance matrix.                       | Yes        |
 | `--envcov`     | Path to environmental covariance matrix.                 | Optional   |
@@ -113,7 +113,7 @@ Specify the required core arguments for each mode and optional parameters like c
 #### Trait Selection (Optimization with `--pick`)
 | Argument       | Description                                               | Required?  |
 |----------------|-----------------------------------------------------------|------------|
-| `--pick`       | Optimize non-target trait selection based on `r2_o`.      |          |
+| `--pick`       | Optimize non-target trait selection based on `r2_o`.      | Yes        |
 | `--gencov`     | Path to genetic covariance matrix.                        | Yes        |
 | `--pi`         | Target column name for trait selection.                   | Yes        |
 | `--Q`          | Number of non-target traits to select (default: 30).      | No         |
