@@ -17,9 +17,8 @@
    - [Phenotype Matrix](#phenotype-matrix)
    - [Covariance Matrix](#covariance-matrix)
    - [Prevalence File](#prevalence-file)
-6. [Analysis Modes](#analysis-modes)
-7. [Examples](#examples)
-8. [Contact](#contact)
+6. [Examples](#examples)
+7. [Contact](#contact)
 
 ---
 
