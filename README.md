@@ -142,13 +142,16 @@ Specify the required core arguments for each mode and optional parameters like c
 
 ## Input File Formats
 
-### Phenotype Matrix (`--bin`, `--con`)
+### Phenotype Matrix
+(Used with --bin, --con)
 A tab-delimited text file. The first column must be labeled `IID` for individual IDs, followed by columns for each trait.
 
-### Covariance Matrix (`--gencov`, `--envcov`)
+### Covariance Matrix
+(Used with`--gencov`, `--envcov`)
 A tab-delimited matrix file with the first row containing trait IDs and subsequent rows forming an `n x n` matrix of covariance values for `n` traits.
 
-### Prevalence File (`--prevalence`)
+### Prevalence File
+(Used with `--prevalence`)
 A two-column tab-delimited file with `TID` for trait IDs and `prev` for disease prevalence. This file is required for binary traits.
 
 ---
