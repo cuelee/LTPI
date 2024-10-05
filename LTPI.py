@@ -165,8 +165,8 @@ if __name__ == '__main__':
             args.ltpiin = read_binary_ltpiin(args, args.bin, args.binary_traits, str)
             args.conf, args.samp_bin, args.time = LTPI_GHK(args)
             
-            args.conf.to_csv(f'{args.out}.conf', sep='\t', index=True, header=True, na_rep='NA')
-            args.samp_bin.to_csv(f'{args.out}.txt.gz', sep='\t', index=True, header=True, compression='gzip', na_rep='NA')
+            args.conf.to_csv(f'{args.out}.config_summary', sep='\t', index=True, header=True, na_rep='NA')
+            args.samp_bin.to_csv(f'{args.out}.ltpi_scores.gz', sep='\t', index=True, header=True, compression='gzip', na_rep='NA')
 
         elif args.con:
             args.ltpiin = read_continuous_ltpiin(args, args.con, None, float)

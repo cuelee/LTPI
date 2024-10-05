@@ -17,8 +17,9 @@
    - [Phenotype Matrix](#phenotype-matrix)
    - [Covariance Matrix](#covariance-matrix)
    - [Prevalence File](#prevalence-file)
-6. [Examples](#examples)
-7. [Contact](#contact)
+6. [Output Files](#ouput-files)
+7. [Examples](#examples)
+8. [Contact](#contact)
 
 ---
 
@@ -153,6 +154,35 @@ A tab-delimited matrix file with the first row containing trait IDs and subseque
 ### Prevalence of binary traits
 (Used with `--prevalence`)
 A two-column tab-delimited file with `TID` for trait IDs and `prev` for disease prevalence. This file is required for binary traits.
+
+---
+
+## Output Files
+
+After running the LTPI analysis, the following output files will be generated with the corresponding suffixes:
+
+1. **{out}.config_summary**  
+   Contains three columns:
+   - `CONF`: Configurations (case-control status).
+   - `EG`: Expected genetic liabilities.
+   - `G_SE`: Standard error of EG.
+
+2. **{out}.ltpi_scores.gz**  
+   Contains three columns:
+   - `IID`: Individual ID.
+   - `LTPI`: LTPI score for each individual.
+   - `CONF`: Configurations (case-control status).
+
+3. **{out}.shrinkage_value**  
+   Contains a single value representing the shrinkage value used in the ATSA analysis.
+
+4. **{out}.r2_summary**  
+   A two-column file with multiple rows, where each row represents a trait:
+   - `R2`: Cumulative R2 for the trait and all traits listed above it.
+   - `Condition Number`: Estimated condition number including all traits listed above.
+
+5. **{out}.selected_traits**  
+   A single-column file listing the traits selected by ATSA.
 
 ---
 

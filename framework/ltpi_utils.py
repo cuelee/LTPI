@@ -87,9 +87,9 @@ def write_r2(args):
     """Write selected traits, shrinkage factors, and summary statistics to output files."""
     if len(args.selected_traits) > 1:
         selected_traits_df = pd.Series(args.selected_traits)
-        selected_traits_df.to_csv(f'{args.out}.r2_traits', sep='\t', index=False, header=False, na_rep='NA')
+        selected_traits_df.to_csv(f'{args.out}.selected_traits', sep='\t', index=False, header=False, na_rep='NA')
         best_shrinkage_df = pd.Series(args.best_shrinkage)
-        best_shrinkage_df.to_csv(f'{args.out}.r2_best', sep='\t', index=False, header=False, na_rep='NA')
+        best_shrinkage_df.to_csv(f'{args.out}.shrinkage_value', sep='\t', index=False, header=False, na_rep='NA')
         args.best_S.to_csv(f'{args.out}.r2_summary', sep='\t', index=True, header=True, na_rep='NA')
         args.log.log(f"--pick summary:\nTraits selected: {args.selected_traits}\n"
                      f"Shrinkage factor: {args.best_shrinkage}\nSummary: {args.best_S}")
