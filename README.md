@@ -80,11 +80,11 @@ If you prefer to manually install the dependencies, follow these steps:
 
 ## Usage
 
-`LTPI` offers three analysis modes based on the input data:
+`LTPI` provides three analysis modes depending on the input data:
 
-1. **Binary Phenotype Analysis (`--bin`)**: Estimates genetic liability for binary traits. Requires binary input, prevalence data, and covariance matrices.
-2. **Continuous Phenotype Analysis (`--con`)**: Handles continuous traits and integrates them with binary traits. Requires previous binary output (`--bout`).
-3. **Trait Selection Optimization (`--pick`)**: Automatically selects non-target traits to optimize genetic liability prediction.
+1. **Binary Phenotype Analysis (`--bin`)**: Estimates genetic liability based on binary traits. Requires binary input, prevalence data, and covariance matrices (`--gencov`, `--envcov`).
+2. **Continuous Phenotype Analysis (`--con`)**: Integrates continuous traits with the results from binary trait analysis. Requires the binary output from `--bin` (`--bout`), continuous input, and covariance matrices.
+3. **Trait Selection Optimization (`--pick`)**: Optionally selects the most relevant non-target traits to enhance genetic liability prediction. Requires a disease of interest (`--pi`) and genetic covariance matrices (`--gencov`), applicable to either `--bin` or `--con`.
 
 Specify the required core arguments for each mode and optional parameters like covariance matrices to fine-tune the analysis.
 
