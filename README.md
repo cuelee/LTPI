@@ -164,7 +164,7 @@ After running the LTPI analysis, the following output files will be generated wi
 1. **{out}.config_summary**  
    Contains three columns:
    - `CONF`: Configurations (case-control status).
-   - `EG`: Expected genetic liabilities.
+   - `EG`: Estimated genetic liabilities.
    - `G_SE`: Standard error of EG.
 
 2. **{out}.ltpi_scores.gz**  
@@ -177,11 +177,12 @@ After running the LTPI analysis, the following output files will be generated wi
    Contains a single value representing the shrinkage value used in the ATSA analysis.
 
 4. **{out}.r2_summary**  
-   A two-column file with multiple rows, where each row represents a trait:
+   A three-column file with multiple rows, where each row represents a trait:
+   - `TID`: Trait ID
    - `R2`: Cumulative R2 for the trait and all traits listed above it.
    - `Condition Number`: Estimated condition number including all traits listed above.
 
-5. **{out}.selected_traits**  
+6. **{out}.selected_traits**  
    A single-column file listing the traits selected by ATSA.
 
 ---
