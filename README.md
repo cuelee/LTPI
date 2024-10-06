@@ -161,6 +161,8 @@ A tab-delimited matrix file with the first row containing trait IDs and subseque
 (Used with `--prevalence`)
 A two-column tab-delimited file with `TID` for trait IDs and `prev` for disease prevalence. This file is required for binary traits.
 
+**Note**: We assume that the biobank EHR data approximates population prevalence. However, users should consider potential biases introduced by the biobank's data collection process, especially if the data contains sampling bias.
+
 ---
 
 ## Output Files
