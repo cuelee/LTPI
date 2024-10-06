@@ -8,11 +8,11 @@ import numpy as np
 import pandas as pd
 import scipy.stats as ss
 
-def rank_INT(series, c=3.0/8, stochastic=True):
+    def rank_INT(series, c=3.0/8, stochastic=True):
     """ Perform rank-based inverse normal transformation on pandas series.
         If stochastic is True ties are given rank randomly, otherwise ties will
         share the same value. NaN values are ignored.
-
+    
         Args:
             param1 (pandas.Series):   Series of values to transform
             param2 (Optional[float]): Constand parameter (Bloms constant)
@@ -21,7 +21,7 @@ def rank_INT(series, c=3.0/8, stochastic=True):
         Returns:
             pandas.Series
     """
-
+    
     # Check input
     assert(isinstance(series, pd.Series))
     assert(isinstance(c, float))
@@ -38,22 +38,22 @@ def rank_INT(series, c=3.0/8, stochastic=True):
         else:
             # Get rank, ties are averaged
             rank = ss.rankdata(series, method="average")
-
+        
         # Convert numpy array back to series
         rank = pd.Series(rank, index=series.index)
-
+        
         # Convert rank to normal distribution
         transformed = rank.apply(rank_to_normal, c=c, n=len(rank))
         return(transformed)
         
     # Set seed
     np.random.seed(123)
-
+    
     # set NaNs
     ind_null = pd.isnull(series)
     
     transformed = run_irnt(series.loc[~pd.isnull(series)])
-
+    
     series.loc[transformed.index] = transformed
     return (series)
 
@@ -69,7 +69,7 @@ def test():
     
     res = rank_INT(s, stochastic=True)
     print (res)
-
+    
     return 0
 
 if __name__ == '__main__':
