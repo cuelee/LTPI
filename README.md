@@ -150,7 +150,7 @@ A tab-delimited text file where the first column must be labeled `IID` for indiv
 - **Binary traits** are coded as `1` (case) and `0` (control), with `NA` for missing values.
 - **Continuous traits** should follow a standard normal distribution with a mean of `0` and variance of `1`. Missing phenotypes should be labeled as `NA`. If your data does not meet these criteria, you can use the **Rank-Based Inverse Normal Transformation (RINT)** for normalization. This is optional but recommended for continuous data.
 
-You can find the `RINT.py` script for performing this transformation in the utility folder of the repository [LINK](path/to/RINT.py).
+You can find the `RINT.py` script for performing this transformation in the utility folder of the repository [LINK](https://github.com/cuelee/LTPI/blob/main/utility/RINT.py).
 
 
 ### Covariance Matrix
