@@ -49,7 +49,7 @@ To install `LTPI` using a conda environment, follow these steps:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-repo/LTPI.git
+    git clone https://github.com/cuelee/LTPI.git
     cd LTPI
     ```
 
@@ -69,7 +69,7 @@ If you prefer to manually install the dependencies, follow these steps:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-repo/LTPI.git
+    git clone https://github.com/cuelee/LTPI.git
     cd LTPI
     ```
 
