@@ -312,10 +312,7 @@ def RINT(df, c=3.0/8):
     """
     df['R'] = df['EG'].rank(method='average', ascending=True)
     df['LTPI'] = df['R'].apply(rank_to_normal, c=c, n=df.shape[0])
-    
-#     # Min-Max scaling the 'LTPI' column to match 'EG' min and max
-#     df['LTPI'] = (df['LTPI'] - df['LTPI'].min()) * (df['EG'].max() - df['EG'].min()) / (df['LTPI'].max() - df['LTPI'].min()) + df['EG'].min()
-    
+      
     summary = df.groupby('CONF')[['EG', 'LTPI']].first()
     
     return df.reindex(['EG', 'LTPI', 'CONF'], axis=1), summary
