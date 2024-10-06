@@ -198,7 +198,7 @@ if __name__ == '__main__':
             args.ENVCOV = is_pos_def(args, args.ENVCOV.copy(), 'ENV')
 
             args.samp_mle, args.time = LTPI_MLE(args)
-            args.samp_mle.to_csv(f'{args.out}.txt.gz', sep='\t', index=True, header=True, compression='gzip', na_rep='NA')
+            args.samp_mle.to_csv(f'{args.out}.ltpi_scores.gz', sep='\t', index=True, header=True, compression='gzip', na_rep='NA')
 
         # Handle --pick option without --bin or --con
         elif args.pick:
