@@ -154,8 +154,8 @@ You can find the `RINT.py` script for performing this transformation in the util
 
 
 ### Covariance Matrix
-(Used with`--gencov`, `--envcov`)
-A tab-delimited matrix file with the first row containing trait IDs and subsequent rows forming an `n x n` matrix of covariance values for `n` traits.
+(Used with `--gencov`, `--envcov`)  
+A tab-delimited matrix file where the first row contains trait IDs, and the subsequent rows form an `n x n` matrix of covariance values for `n` traits. Missing values (`NA`) are not allowed.
 
 ### Prevalence of binary traits
 (Used with `--prevalence`)
