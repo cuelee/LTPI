@@ -75,8 +75,8 @@ def contribution_based_greedy_algorithm(gencov = None,
             l = [nt for nt in gencov.columns if (nt not in S.index) and (nt not in PI)]
             if len(l) < 1:
                 break
-            val = pd.Series([0] * len(l), index = l)
-            cond = pd.Series([0] * len(l), index = l)
+            val = pd.Series([0.0] * len(l), index = l, dtype='float64')
+            cond = pd.Series([0.0] * len(l), index = l, dtype='float64')
             for temp in l:
                 O = np.append(S.index,temp)
                 R2, cond_O = gen_R2(gencov, PI, O)
