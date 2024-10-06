@@ -8,7 +8,7 @@ import numpy as np
 import pandas as pd
 import scipy.stats as ss
 
-    def rank_INT(series, c=3.0/8, stochastic=True):
+def rank_INT(series, c=3.0/8, stochastic=True):
     """ Perform rank-based inverse normal transformation on pandas series.
         If stochastic is True ties are given rank randomly, otherwise ties will
         share the same value. NaN values are ignored.
