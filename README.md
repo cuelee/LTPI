@@ -122,7 +122,7 @@ Specify the required core arguments for each mode and optional parameters like c
 ### Covariance Matrix Arguments
 | Argument          | Description                                                     | Required? |
 |-------------------|-----------------------------------------------------------------|-----------|
-| `--gencov`        | Path to genetic covariance matrix.                              | Yes       |
+| `--gencov`        | Path to genetic covariance matrix.                              | Optional       |
 | `--envcov`        | Path to environmental covariance matrix.                        | Optional  |
 | `--shrink`        | Apply covariance shrinkage: G for `gencov`, E for `envcov`, B for both. | Optional  |
 | `--shrink_target` | Target condition number for covariance shrinkage (default: 1.5). | No        |
