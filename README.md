@@ -180,7 +180,7 @@ After running the LTPI analysis, the following output files will be generated wi
    A three-column file with multiple rows, where each row represents a trait:
    - `TID`: Trait ID
    - `R2`: Cumulative R2 for the trait and all traits listed above it.
-   - `Condition Number`: Estimated condition number including all traits listed above.
+   - `COND`: Estimated condition number for the genetic covariance matrix corresponding to the cumulative R2.
 
 6. **{out}.selected_traits**  
    A single-column file listing the traits selected by ATSA.
