@@ -107,7 +107,7 @@ Specify the required core arguments for each mode and optional parameters like c
 | Argument       | Description                                             | Required?  |
 |----------------|---------------------------------------------------------|------------|
 | `--con`        | Path to continuous phenotype input file.                 | Yes        |
-| `--bout`       | Output file from previous binary analysis.               | Yes        |
+| `--bout`       | `--out` from previous binary analysis.                   | Yes        |
 | `--gencov`     | Path to genetic covariance matrix.                       | Yes        |
 | `--envcov`     | Path to environmental covariance matrix.                 | Optional   |
 
