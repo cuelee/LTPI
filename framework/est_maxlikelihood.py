@@ -56,7 +56,7 @@ def eigen_decomposition(K):
 def estimate_NA_GSE(conf):
     conf['G_SE'] = conf['G_SE'].astype('float64')
     mean_value = conf['G_SE'].mean()
-    conf['G_SE'].fillna(mean_value, inplace=True)
+    conf['G_SE'] = conf['G_SE'].fillna(mean_value)
     return(conf)
 
 def argmax_mle(param):
