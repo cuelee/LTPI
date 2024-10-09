@@ -1,0 +1,879 @@
+Agent pid 26837
+Identity added: /ifs/home/msph/eigen/hl3565/.ssh/id_rsa (/ifs/home/msph/eigen/hl3565/.ssh/id_rsa)
+Identity added: /ifs/home/msph/eigen/hl3565/.ssh/github_key (/ifs/home/msph/eigen/hl3565/.ssh/github_key)
+[I 2024-10-07 07:54:38.845 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2024-10-07 07:54:38.858 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2024-10-07 07:54:38.873 ServerApp] jupyterlab | extension was successfully linked.
+[W 2024-10-07 07:54:38.882 JupyterNotebookApp] 'password' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2024-10-07 07:54:38.887 ServerApp] ServerApp.password config is deprecated in 2.0. Use PasswordIdentityProvider.hashed_password.
+[I 2024-10-07 07:54:38.887 ServerApp] notebook | extension was successfully linked.
+[I 2024-10-07 07:54:43.685 ServerApp] notebook_shim | extension was successfully linked.
+[I 2024-10-07 07:54:43.921 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2024-10-07 07:54:43.926 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2024-10-07 07:54:43.928 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2024-10-07 07:54:44.004 LabApp] JupyterLab extension loaded from /ifs/scratch/msph/eigen/hl3565/conda/envs/jupyter03/lib/python3.11/site-packages/jupyterlab
+[I 2024-10-07 07:54:44.004 LabApp] JupyterLab application directory is /ifs/scratch/msph/eigen/hl3565/conda/envs/jupyter03/share/jupyter/lab
+[I 2024-10-07 07:54:44.006 LabApp] Extension Manager is 'pypi'.
+[I 2024-10-07 07:54:44.043 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2024-10-07 07:54:44.057 ServerApp] notebook | extension was successfully loaded.
+[I 2024-10-07 07:54:44.057 ServerApp] Serving notebooks from local directory: /ifs/scratch/msph/eigen/hl3565
+[I 2024-10-07 07:54:44.057 ServerApp] Jupyter Server 2.14.2 is running at:
+[I 2024-10-07 07:54:44.057 ServerApp] http://ha1c4n1.hpc:8888/lab
+[I 2024-10-07 07:54:44.057 ServerApp]     http://127.0.0.1:8888/lab
+[I 2024-10-07 07:54:44.057 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[I 2024-10-07 07:54:46.012 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2024-10-07 09:59:22.668 ServerApp] 302 GET / (@10.116.210.44) 1.37ms
+[W 2024-10-07 09:59:26.409 LabApp] Could not determine jupyterlab build status without nodejs
+[W 2024-10-07 09:59:29.876 ServerApp] Notebook 01_MTGB/analysis/11_LTPI_UKB/02_generate_CAD-LTPI_input.ipynb is not trusted
+[W 2024-10-07 09:59:29.882 ServerApp] Notebook 03_DeepPhe/analysis/04_PPI_test/01_PPI_test.ipynb is not trusted
+[W 2024-10-07 09:59:29.926 ServerApp] Notebook 01_MTGB/analysis/11_LTPI_UKB/01_gathering_data.ipynb is not trusted
+[W 2024-10-07 09:59:29.966 ServerApp] Notebook 01_MTGB/Untitled.ipynb is not trusted
+[I 2024-10-07 09:59:30.905 ServerApp] Kernel started: 7573c305-772a-4fcc-8c4a-3c5bbfb1498c
+[I 2024-10-07 09:59:30.947 ServerApp] Kernel started: ae1a4e91-6c66-4c96-93d7-495c9495bf76
+[I 2024-10-07 09:59:30.954 ServerApp] Kernel started: b1206b03-8753-4227-be01-30d8b865dce7
+[I 2024-10-07 09:59:30.976 ServerApp] Kernel started: 1df42375-0a31-4dcb-a755-d92e0a6b4887
+[W 2024-10-07 09:59:31.031 ServerApp] 404 GET /api/contents/conda/envs/jupyter/lib/python3.9/site-packages/pandas/_libs/lib.pyx?content=0&hash=0&1728309570677 (234f4a7bba994c6bb4875245cb7e0a11@10.116.210.44) 6.09ms referer=http://localhost:3212/lab?
+[W 2024-10-07 09:59:31.032 ServerApp] 404 GET /api/contents/conda/envs/jupyter/lib/python3.9/site-packages/pandas/_libs/lib.pyx?content=0&hash=0&1728309570677 (10.116.210.44): No such file or directory: conda/envs/jupyter/lib/python3.9/site-packages/pandas/_libs/lib.pyx
+[I 2024-10-07 09:59:31.126 ServerApp] Kernel started: 2e6f2e18-4976-4953-a2f2-16ed741cac00
+[W 2024-10-07 09:59:31.523 ServerApp] 404 GET /api/contents/01_MTGB/analysis/data/03_LTPI_analysis_UKB/sumstats/Blood_counts/phenotype_info.tsv.gz?content=0&hash=0&1728309571361 (234f4a7bba994c6bb4875245cb7e0a11@10.116.210.44) 11.66ms referer=http://localhost:3212/lab?
+[W 2024-10-07 09:59:31.524 ServerApp] 404 GET /api/contents/01_MTGB/analysis/data/03_LTPI_analysis_UKB/sumstats/Blood_counts/phenotype_info.tsv.gz?content=0&hash=0&1728309571361 (10.116.210.44): No such file or directory: 01_MTGB/analysis/data/03_LTPI_analysis_UKB/sumstats/Blood_counts/phenotype_info.tsv.gz
+[I 2024-10-07 09:59:37.015 ServerApp] Connecting to kernel 7573c305-772a-4fcc-8c4a-3c5bbfb1498c.
+[I 2024-10-07 09:59:37.141 ServerApp] Connecting to kernel 1df42375-0a31-4dcb-a755-d92e0a6b4887.
+[I 2024-10-07 09:59:37.183 ServerApp] Connecting to kernel b1206b03-8753-4227-be01-30d8b865dce7.
+[I 2024-10-07 09:59:37.189 ServerApp] Connecting to kernel ae1a4e91-6c66-4c96-93d7-495c9495bf76.
+[I 2024-10-07 09:59:37.195 ServerApp] Starting buffering for 1df42375-0a31-4dcb-a755-d92e0a6b4887:d0fe4c47-f33f-440f-b2a0-824f484734b8
+[I 2024-10-07 09:59:37.252 ServerApp] Connecting to kernel 1df42375-0a31-4dcb-a755-d92e0a6b4887.
+[I 2024-10-07 09:59:37.269 ServerApp] Connecting to kernel 2e6f2e18-4976-4953-a2f2-16ed741cac00.
+[I 2024-10-07 09:59:37.305 ServerApp] Connecting to kernel 2e6f2e18-4976-4953-a2f2-16ed741cac00.
+[I 2024-10-07 09:59:37.308 ServerApp] Connecting to kernel 2e6f2e18-4976-4953-a2f2-16ed741cac00.
+[W 2024-10-07 09:59:37.422 ServerApp] Got events for closed stream <zmq.eventloop.zmqstream.ZMQStream object at 0x7f225812d0d0>
+[W 2024-10-07 09:59:37.476 ServerApp] Got events for closed stream <zmq.eventloop.zmqstream.ZMQStream object at 0x7f225822f910>
+[I 2024-10-07 09:59:42.543 ServerApp] Saving file at /01_MTGB/Untitled.ipynb
+[W 2024-10-07 09:59:42.544 ServerApp] Notebook 01_MTGB/Untitled.ipynb is not trusted
+[I 2024-10-07 09:59:43.777 ServerApp] Starting buffering for 2e6f2e18-4976-4953-a2f2-16ed741cac00:1b043ca1-12fb-4e16-8726-f56248ff87c8
+[I 2024-10-07 09:59:44.842 ServerApp] Saving file at /01_MTGB/analysis/11_LTPI_UKB/02_generate_CAD-LTPI_input.ipynb
+[W 2024-10-07 09:59:44.843 ServerApp] Notebook 01_MTGB/analysis/11_LTPI_UKB/02_generate_CAD-LTPI_input.ipynb is not trusted
+[I 2024-10-07 09:59:45.564 ServerApp] Starting buffering for 7573c305-772a-4fcc-8c4a-3c5bbfb1498c:0566ee01-888e-4bda-a564-c0dbdfa23a17
+[I 2024-10-07 09:59:46.625 ServerApp] Saving file at /01_MTGB/analysis/11_LTPI_UKB/01_gathering_data.ipynb
+[W 2024-10-07 09:59:46.627 ServerApp] Notebook 01_MTGB/analysis/11_LTPI_UKB/01_gathering_data.ipynb is not trusted
+[I 2024-10-07 09:59:47.149 ServerApp] Starting buffering for ae1a4e91-6c66-4c96-93d7-495c9495bf76:03a85d5a-7a86-40df-a566-ae5d935ef816
+[I 2024-10-07 09:59:49.191 ServerApp] Saving file at /01_MTGB/analysis/11_LTPI_UKB/irnt_code.ipynb
+[I 2024-10-07 09:59:49.925 ServerApp] Starting buffering for 1df42375-0a31-4dcb-a755-d92e0a6b4887:5e40722e-b137-48b1-9ce8-ba80e926eb3b
+[I 2024-10-07 09:59:51.175 ServerApp] Creating new notebook in /01_MTGB
+[I 2024-10-07 09:59:51.431 ServerApp] Kernel started: 074d05f1-96ae-4260-aae4-7f2fcac4b407
+[I 2024-10-07 09:59:52.653 ServerApp] Connecting to kernel 074d05f1-96ae-4260-aae4-7f2fcac4b407.
+[I 2024-10-07 09:59:55.093 ServerApp] Kernel shutdown: 074d05f1-96ae-4260-aae4-7f2fcac4b407
+[W 2024-10-07 09:59:55.441 ServerApp] delete /01_MTGB/Untitled1.ipynb
+[W 2024-10-07 10:00:14.770 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[W 2024-10-07 10:00:14.951 ServerApp] 404 GET /api/contents/c10/cuda/CUDAFunctions.cpp?content=0&hash=0&1728309614899 (234f4a7bba994c6bb4875245cb7e0a11@10.116.210.44) 2.70ms referer=http://localhost:3212/lab/tree/03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 10:00:14.952 ServerApp] 404 GET /api/contents/c10/cuda/CUDAFunctions.cpp?content=0&hash=0&1728309614899 (10.116.210.44): No such file or directory: c10/cuda/CUDAFunctions.cpp
+[I 2024-10-07 10:00:15.013 ServerApp] Kernel started: 63f93e5f-0f50-43fa-b247-9ad492d6a4f5
+[I 2024-10-07 10:00:16.251 ServerApp] Connecting to kernel 63f93e5f-0f50-43fa-b247-9ad492d6a4f5.
+[I 2024-10-07 10:01:30.298 ServerApp] Saving file at /03_DeepPhe/analysis/04_PPI_test/01_PPI_test.ipynb
+[W 2024-10-07 10:01:30.299 ServerApp] Notebook 03_DeepPhe/analysis/04_PPI_test/01_PPI_test.ipynb is not trusted
+[W 2024-10-07 10:06:33.552 ServerApp] Notebook 03_DeepPhe/codes/pippin/test2.ipynb is not trusted
+[I 2024-10-07 10:06:33.818 ServerApp] Kernel started: f557c94a-ae17-412d-890a-2200a7e5a028
+[I 2024-10-07 10:06:35.940 ServerApp] Connecting to kernel f557c94a-ae17-412d-890a-2200a7e5a028.
+2024-10-07 10:07:43.450596: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-10-07 10:07:46.101219: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-10-07 10:07:47.278312: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-10-07 10:08:16.309214: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+[I 2024-10-07 10:08:33.675 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test2.ipynb
+[W 2024-10-07 10:08:33.676 ServerApp] Notebook 03_DeepPhe/codes/pippin/test2.ipynb is not trusted
+[I 2024-10-07 10:10:33.758 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test2.ipynb
+[W 2024-10-07 10:10:33.760 ServerApp] Notebook 03_DeepPhe/codes/pippin/test2.ipynb is not trusted
+[I 2024-10-07 10:13:05.171 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test2.ipynb
+[W 2024-10-07 10:13:05.172 ServerApp] Notebook 03_DeepPhe/codes/pippin/test2.ipynb is not trusted
+[I 2024-10-07 10:13:07.430 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test2.ipynb
+[W 2024-10-07 10:13:07.431 ServerApp] Notebook 03_DeepPhe/codes/pippin/test2.ipynb is not trusted
+[W 2024-10-07 10:14:21.493 LabApp] Could not determine jupyterlab build status without nodejs
+[I 2024-10-07 10:14:21.665 ServerApp] Connecting to kernel 7573c305-772a-4fcc-8c4a-3c5bbfb1498c.
+[I 2024-10-07 10:14:21.755 ServerApp] Connecting to kernel ae1a4e91-6c66-4c96-93d7-495c9495bf76.
+[I 2024-10-07 10:14:21.788 ServerApp] Connecting to kernel b1206b03-8753-4227-be01-30d8b865dce7.
+[I 2024-10-07 10:14:21.795 ServerApp] Starting buffering for 7573c305-772a-4fcc-8c4a-3c5bbfb1498c:5a0a0b04-7c16-4eda-8f58-bdb7ce48e46f
+[I 2024-10-07 10:14:21.821 ServerApp] Starting buffering for ae1a4e91-6c66-4c96-93d7-495c9495bf76:e2d28e52-ee46-4ec9-a7f8-4a4246ecef90
+[I 2024-10-07 10:14:21.822 ServerApp] Connecting to kernel 1df42375-0a31-4dcb-a755-d92e0a6b4887.
+[I 2024-10-07 10:14:21.854 ServerApp] Connecting to kernel 2e6f2e18-4976-4953-a2f2-16ed741cac00.
+[I 2024-10-07 10:14:21.879 ServerApp] Starting buffering for 1df42375-0a31-4dcb-a755-d92e0a6b4887:498dbec5-4c46-477b-9e0e-c5fc02d8ac49
+[I 2024-10-07 10:14:21.886 ServerApp] Connecting to kernel 63f93e5f-0f50-43fa-b247-9ad492d6a4f5.
+[I 2024-10-07 10:14:21.913 ServerApp] Starting buffering for 2e6f2e18-4976-4953-a2f2-16ed741cac00:df4eb3ea-7559-452b-ace2-07c63387a9dc
+[I 2024-10-07 10:14:21.919 ServerApp] Connecting to kernel f557c94a-ae17-412d-890a-2200a7e5a028.
+[W 2024-10-07 10:14:23.364 ServerApp] Notebook 03_DeepPhe/codes/pippin/test2.ipynb is not trusted
+[I 2024-10-07 10:14:23.654 ServerApp] Connecting to kernel f557c94a-ae17-412d-890a-2200a7e5a028.
+[I 2024-10-07 10:14:31.115 ServerApp] Kernel started: f9f0c6e2-4d9d-4317-818f-dcbe9dc51310
+[I 2024-10-07 10:14:33.241 ServerApp] Connecting to kernel f9f0c6e2-4d9d-4317-818f-dcbe9dc51310.
+[I 2024-10-07 10:14:41.037 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 10:14:55.084 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 10:14:59.550 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 10:15:07.512 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 10:15:07.568 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test2.ipynb
+[W 2024-10-07 10:15:07.569 ServerApp] Notebook 03_DeepPhe/codes/pippin/test2.ipynb is not trusted
+[I 2024-10-07 10:18:57.227 ServerApp] 302 GET / (@10.116.210.44) 0.73ms
+[W 2024-10-07 10:18:59.266 LabApp] Could not determine jupyterlab build status without nodejs
+[I 2024-10-07 10:23:07.652 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test2.ipynb
+[W 2024-10-07 10:23:07.653 ServerApp] Notebook 03_DeepPhe/codes/pippin/test2.ipynb is not trusted
+[I 2024-10-07 10:24:22.183 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test2.ipynb
+[W 2024-10-07 10:24:22.185 ServerApp] Notebook 03_DeepPhe/codes/pippin/test2.ipynb is not trusted
+[I 2024-10-07 10:32:41.264 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 10:33:53.179 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 10:33:59.734 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 10:34:00.723 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 10:34:29.392 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 10:37:16.690 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 10:37:53.062 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 10:37:59.520 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:01:50.537 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:01:59.679 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:03:59.762 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:09:15.340 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:09:56.348 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:10:29.352 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:10:36.678 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:10:39.468 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:10:48.807 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:10:57.333 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:11:12.779 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:11:14.803 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:11:15.707 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:11:43.357 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:11:54.742 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:11:55.696 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:11:59.267 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:12:09.828 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:12:10.445 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:12:19.899 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:17:45.935 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:20:17.445 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:20:21.998 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:22:22.271 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test2.ipynb
+[W 2024-10-07 11:22:22.272 ServerApp] Notebook 03_DeepPhe/codes/pippin/test2.ipynb is not trusted
+[I 2024-10-07 11:25:43.323 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test2.ipynb
+[W 2024-10-07 11:25:43.325 ServerApp] Notebook 03_DeepPhe/codes/pippin/test2.ipynb is not trusted
+[I 2024-10-07 11:26:06.556 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:26:57.535 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:27:12.581 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:28:04.181 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[W 2024-10-07 11:28:04.252 ServerApp] /ifs/scratch/msph/eigen/hl3565/03_DeepPhe/codes/pippin/.~PIPPIN.ipynb doesn't exist
+[I 2024-10-07 11:28:57.173 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:29:01.157 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:29:10.954 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:29:17.335 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:29:26.480 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:29:51.780 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:29:52.567 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:30:20.740 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:30:35.816 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 11:32:35.894 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:11:54.268 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:12:46.202 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:13:20.242 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:13:25.769 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:13:39.956 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:14:32.431 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:18:09.142 ServerApp] Saving file at /03_DeepPhe/codes/source/pippin_test/pippin.py
+[I 2024-10-07 13:18:12.967 ServerApp] Saving file at /03_DeepPhe/codes/source/pippin_test/pippin.py
+[I 2024-10-07 13:18:28.237 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:20:21.858 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:21:24.254 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:21:39.035 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:21:51.239 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:22:03.606 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:23:24.156 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:23:25.470 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:24:36.056 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:30:18.126 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:30:18.307 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:32:18.220 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:32:29.354 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:32:51.892 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[W 2024-10-07 13:33:07.101 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[W 2024-10-07 13:33:07.295 ServerApp] 404 GET /api/contents/c10/cuda/CUDAFunctions.cpp?content=0&hash=0&1728322387257 (234f4a7bba994c6bb4875245cb7e0a11@10.116.210.44) 1.90ms referer=http://localhost:3212/lab/workspaces/auto-X/tree/03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 13:33:07.295 ServerApp] 404 GET /api/contents/c10/cuda/CUDAFunctions.cpp?content=0&hash=0&1728322387257 (10.116.210.44): No such file or directory: c10/cuda/CUDAFunctions.cpp
+[I 2024-10-07 13:33:07.337 ServerApp] Connecting to kernel 63f93e5f-0f50-43fa-b247-9ad492d6a4f5.
+[I 2024-10-07 13:33:34.064 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 13:33:34.065 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 13:33:36.267 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 13:33:36.268 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 13:33:56.339 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 13:33:56.340 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 13:35:56.408 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 13:35:56.410 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 13:37:56.477 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 13:37:56.478 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 13:38:02.216 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 13:38:02.217 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 13:40:02.279 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 13:40:02.280 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 13:40:14.980 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:40:30.557 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 13:40:30.557 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 13:40:57.033 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 13:40:57.034 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 13:41:43.585 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 13:41:43.586 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 13:41:46.936 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 13:41:46.938 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 13:41:47.879 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 13:41:47.880 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 13:41:53.609 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 13:41:53.610 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 13:42:00.624 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 13:42:00.625 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 13:42:26.479 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:42:27.605 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:43:11.823 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 13:43:11.824 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 13:43:20.005 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:45:11.901 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 13:45:11.903 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 13:48:21.233 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:48:41.828 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:48:44.870 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:49:11.977 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 13:49:11.978 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 13:49:32.216 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 13:49:32.217 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 13:49:37.077 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 13:49:37.077 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 13:50:30.044 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:51:37.969 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 13:51:37.971 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 13:58:06.842 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:58:11.532 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:58:19.815 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:58:21.064 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:58:22.570 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:58:26.587 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:58:30.322 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:58:31.154 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:58:40.278 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 13:58:40.279 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 13:59:31.551 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 13:59:33.521 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:00:40.380 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:00:40.381 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:01:33.604 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:01:52.385 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:01:53.274 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:01:57.787 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:01:57.788 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:03:11.100 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:03:11.100 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:03:22.349 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:05:11.209 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:05:11.210 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:07:33.778 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:07:35.817 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:07:35.818 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:09:35.899 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:09:35.900 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:10:14.643 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:10:15.028 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:10:15.204 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:10:15.388 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:10:29.106 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:10:29.108 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:12:29.173 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:12:29.174 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:14:14.728 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:14:21.598 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:14:29.252 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:14:29.253 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:16:29.328 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:16:29.329 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:18:08.014 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:18:14.355 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:18:14.356 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:18:15.744 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:18:15.745 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:18:15.949 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:18:15.950 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:18:16.120 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:18:16.121 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:18:16.284 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:18:16.284 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:19:07.599 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:19:14.691 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:19:14.693 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:21:04.555 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:21:04.556 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:21:04.747 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:21:04.747 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:21:04.912 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:21:04.913 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:21:05.069 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:21:05.070 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:21:06.186 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:21:06.186 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:21:07.696 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:22:43.269 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:22:43.271 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:22:48.697 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:22:48.698 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:23:15.937 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:23:28.890 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:23:29.553 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:23:30.902 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:23:32.074 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:24:43.346 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:24:43.347 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:28:43.893 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:28:46.885 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:28:53.545 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:28:53.546 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:30:13.445 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:30:14.185 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:30:19.251 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:30:19.252 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:31:39.599 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:31:41.442 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:31:41.756 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:31:42.023 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:32:19.378 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:32:19.379 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:33:13.090 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:33:27.964 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:33:31.928 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:33:32.839 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:33:34.941 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:34:19.491 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:34:19.492 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:34:54.519 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:34:54.520 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:34:55.463 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:34:55.463 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:35:59.475 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:35:59.476 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:37:59.918 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:37:59.919 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:40:00.037 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:40:00.038 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[W 2024-10-07 14:40:52.050 ServerApp] 404 GET /api/contents/01_MTGB/analysis/data/03_LTPI_analysis_UKB/MissingP/LTPI_input/PM03_?content=0&hash=0&1728326451992 (234f4a7bba994c6bb4875245cb7e0a11@10.116.210.44) 2.46ms referer=http://localhost:3212/lab/workspaces/auto-X/tree/03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:40:52.050 ServerApp] 404 GET /api/contents/01_MTGB/analysis/data/03_LTPI_analysis_UKB/MissingP/LTPI_input/PM03_?content=0&hash=0&1728326451992 (10.116.210.44): No such file or directory: 01_MTGB/analysis/data/03_LTPI_analysis_UKB/MissingP/LTPI_input/PM03_
+[W 2024-10-07 14:40:52.139 ServerApp] 404 GET /api/contents/01_MTGB/analysis/data/03_LTPI_analysis_UKB/MissingP/LTPI_input/PM03_Prostate_cancer_ltpi_ghk.txt.gz?content=0&hash=0&1728326452083 (234f4a7bba994c6bb4875245cb7e0a11@10.116.210.44) 1.53ms referer=http://localhost:3212/lab/workspaces/auto-X/tree/03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:40:52.140 ServerApp] 404 GET /api/contents/01_MTGB/analysis/data/03_LTPI_analysis_UKB/MissingP/LTPI_input/PM03_Prostate_cancer_ltpi_ghk.txt.gz?content=0&hash=0&1728326452083 (10.116.210.44): No such file or directory: 01_MTGB/analysis/data/03_LTPI_analysis_UKB/MissingP/LTPI_input/PM03_Prostate_cancer_ltpi_ghk.txt.gz
+[I 2024-10-07 14:42:00.137 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:42:00.139 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:43:46.493 ServerApp] Kernel restarted: 63f93e5f-0f50-43fa-b247-9ad492d6a4f5
+[I 2024-10-07 14:43:46.507 ServerApp] Connecting to kernel 63f93e5f-0f50-43fa-b247-9ad492d6a4f5.
+[W 2024-10-07 14:43:50.048 ServerApp] Got events for closed stream <zmq.eventloop.zmqstream.ZMQStream object at 0x7f2258692810>
+[I 2024-10-07 14:44:00.228 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:44:00.229 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:44:05.669 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:44:05.670 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:46:05.782 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:46:05.782 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:48:05.063 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:48:05.891 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:48:05.891 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:48:10.081 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:48:10.081 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:48:10.812 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:48:10.812 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:50:10.924 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:50:10.925 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:50:44.810 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:50:44.811 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:50:45.946 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:50:45.947 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:51:34.671 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:51:34.672 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:52:05.180 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:52:08.510 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:52:09.560 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:52:34.341 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 14:53:34.761 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:53:34.762 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:55:34.882 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 14:55:34.883 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 14:58:08.620 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 15:00:08.715 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 15:00:11.976 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 15:00:13.507 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 15:02:12.062 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 15:03:49.327 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 15:04:12.157 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 15:04:55.761 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 15:06:55.852 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 15:08:55.947 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 15:10:56.038 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 15:11:37.813 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 15:13:37.905 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 15:14:51.361 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 15:16:51.455 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 15:17:31.888 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 15:17:52.802 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:17:52.803 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:17:55.188 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:17:55.189 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:19:00.678 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 15:19:02.903 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 15:19:13.342 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 15:19:15.873 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 15:20:00.261 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 15:20:02.146 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 15:20:12.908 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:20:12.909 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:22:00.379 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 15:22:00.459 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[W 2024-10-07 15:22:00.553 ServerApp] /ifs/scratch/msph/eigen/hl3565/03_DeepPhe/codes/pippin/.~PIPPIN.ipynb doesn't exist
+[I 2024-10-07 15:22:12.984 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:22:12.985 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:22:20.534 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 15:22:31.325 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 15:22:47.549 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 15:23:22.090 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:23:22.091 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:23:39.573 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:23:39.574 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:23:54.887 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 15:24:21.071 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:24:21.072 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:24:31.206 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 15:26:21.230 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:26:21.230 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:27:08.512 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:27:08.513 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:28:26.922 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:28:26.923 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:28:35.260 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:28:35.261 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:30:35.378 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:30:35.379 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:32:35.839 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:32:35.840 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:34:36.839 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:34:36.839 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:36:36.947 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:36:36.948 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:37:43.347 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:37:43.348 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:37:58.894 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:37:58.895 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:38:13.302 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:38:13.303 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:38:31.870 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 15:39:52.037 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:39:52.038 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:41:50.506 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:41:50.508 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:43:08.938 ServerApp] Kernel restarted: 63f93e5f-0f50-43fa-b247-9ad492d6a4f5
+[I 2024-10-07 15:43:08.952 ServerApp] Connecting to kernel 63f93e5f-0f50-43fa-b247-9ad492d6a4f5.
+[W 2024-10-07 15:43:11.038 ServerApp] Got events for closed stream <zmq.eventloop.zmqstream.ZMQStream object at 0x7f22593b9d10>
+[I 2024-10-07 15:43:50.588 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:43:50.589 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:45:50.684 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:45:50.685 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:47:50.790 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:47:50.791 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:48:54.468 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:48:54.469 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:48:56.017 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:48:56.018 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:48:57.173 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:48:57.174 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:49:01.627 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:49:01.628 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:50:46.201 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:50:46.202 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:52:46.274 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:52:46.275 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:53:18.649 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:53:18.650 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:55:18.803 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:55:18.804 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:56:54.011 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:56:54.012 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:56:55.247 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:56:55.248 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 15:58:54.087 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 15:58:54.088 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:00:54.194 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:00:54.195 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:01:12.045 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:01:12.046 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:03:12.791 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:03:12.791 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:05:02.784 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:05:02.785 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:05:58.679 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:05:58.680 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:07:58.761 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:07:58.762 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:09:58.852 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:09:58.853 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:10:00.894 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:10:00.895 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:13:01.329 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:13:01.330 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:13:15.837 ServerApp] Starting buffering for f9f0c6e2-4d9d-4317-818f-dcbe9dc51310:bf20f4e8-d916-4cdf-a33f-103445cf5cbc
+[W 2024-10-07 16:13:17.527 LabApp] Could not determine jupyterlab build status without nodejs
+[I 2024-10-07 16:13:17.609 ServerApp] Connecting to kernel 7573c305-772a-4fcc-8c4a-3c5bbfb1498c.
+[I 2024-10-07 16:13:17.654 ServerApp] Connecting to kernel ae1a4e91-6c66-4c96-93d7-495c9495bf76.
+[I 2024-10-07 16:13:17.696 ServerApp] Connecting to kernel b1206b03-8753-4227-be01-30d8b865dce7.
+[I 2024-10-07 16:13:17.743 ServerApp] Connecting to kernel 1df42375-0a31-4dcb-a755-d92e0a6b4887.
+[I 2024-10-07 16:13:17.800 ServerApp] Connecting to kernel 2e6f2e18-4976-4953-a2f2-16ed741cac00.
+[I 2024-10-07 16:13:17.810 ServerApp] Starting buffering for 7573c305-772a-4fcc-8c4a-3c5bbfb1498c:a4e56b1b-033a-4b0a-b1c6-c8adf45e4e02
+[I 2024-10-07 16:13:17.834 ServerApp] Connecting to kernel 63f93e5f-0f50-43fa-b247-9ad492d6a4f5.
+[I 2024-10-07 16:13:17.843 ServerApp] Starting buffering for ae1a4e91-6c66-4c96-93d7-495c9495bf76:42977688-0c44-4e0f-b425-c2de4d9a97a1
+[I 2024-10-07 16:13:17.843 ServerApp] Starting buffering for 1df42375-0a31-4dcb-a755-d92e0a6b4887:af0a465c-3e25-47d1-bb51-172fc25183b6
+[I 2024-10-07 16:13:17.869 ServerApp] Connecting to kernel f557c94a-ae17-412d-890a-2200a7e5a028.
+[I 2024-10-07 16:13:17.875 ServerApp] Starting buffering for 2e6f2e18-4976-4953-a2f2-16ed741cac00:23c01707-b7bb-4357-aa27-42c880fe8ca7
+[I 2024-10-07 16:13:17.904 ServerApp] Connecting to kernel f9f0c6e2-4d9d-4317-818f-dcbe9dc51310.
+[I 2024-10-07 16:13:17.946 ServerApp] Starting buffering for f9f0c6e2-4d9d-4317-818f-dcbe9dc51310:45f3e2e0-1a82-4555-866d-3a2e459d1900
+[W 2024-10-07 16:13:18.512 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:13:19.097 ServerApp] Connecting to kernel 63f93e5f-0f50-43fa-b247-9ad492d6a4f5.
+[I 2024-10-07 16:13:19.120 ServerApp] Connecting to kernel f9f0c6e2-4d9d-4317-818f-dcbe9dc51310.
+[I 2024-10-07 16:13:46.254 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:13:46.255 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:15:01.896 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:15:01.897 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:15:06.938 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:15:06.938 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:17:01.988 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:17:01.989 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:19:02.115 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:19:02.116 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:21:02.221 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:21:02.222 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:22:21.210 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:22:21.211 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:22:38.466 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:22:38.467 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:24:38.545 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:24:38.546 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:25:14.941 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:25:14.943 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:25:18.334 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:25:18.335 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:27:18.434 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:27:18.434 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:29:17.280 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:29:17.282 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:29:33.328 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:29:33.329 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:29:44.384 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:29:44.385 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:30:20.137 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:30:20.138 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:30:34.355 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:30:34.356 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:31:05.599 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:31:05.600 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:31:45.933 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:31:45.934 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:31:54.547 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:31:54.548 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:31:59.344 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:31:59.345 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:33:13.832 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:33:13.833 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:33:19.206 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:33:19.206 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:33:29.874 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:33:29.875 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:35:29.977 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:35:29.977 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:36:09.691 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:36:09.691 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:36:11.085 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:36:11.086 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:36:17.949 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:36:17.950 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:36:19.637 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:36:19.638 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:36:30.446 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:36:30.447 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:38:19.736 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:38:19.737 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:40:39.641 ServerApp] Kernel restarted: 63f93e5f-0f50-43fa-b247-9ad492d6a4f5
+[I 2024-10-07 16:40:39.653 ServerApp] Connecting to kernel 63f93e5f-0f50-43fa-b247-9ad492d6a4f5.
+[W 2024-10-07 16:40:41.736 ServerApp] Got events for closed stream <zmq.eventloop.zmqstream.ZMQStream object at 0x7f225baecb10>
+[I 2024-10-07 16:41:40.400 ServerApp] Kernel started: 4d46a520-1009-4ac9-8996-5feff7282f22
+[I 2024-10-07 16:41:42.047 ServerApp] Connecting to kernel 4d46a520-1009-4ac9-8996-5feff7282f22.
+[I 2024-10-07 16:42:15.577 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:42:15.578 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:43:20.961 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:43:20.963 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:44:34.267 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:44:34.268 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:45:01.938 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:45:01.939 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:45:59.040 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:45:59.041 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:46:11.066 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:46:11.067 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:46:34.524 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:46:34.525 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:46:37.732 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:46:37.732 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+2024-10-07 16:46:38.073522: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-10-07 16:46:38.101521: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-10-07 16:46:38.110042: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-10-07 16:46:41.714921: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+[I 2024-10-07 16:47:12.968 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:47:12.968 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:47:53.724 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:47:53.725 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:48:17.955 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:48:17.956 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:48:21.580 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:48:21.580 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:50:18.734 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:50:18.735 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 16:52:16.695 ServerApp] Kernel restarted: 63f93e5f-0f50-43fa-b247-9ad492d6a4f5
+[I 2024-10-07 16:52:16.710 ServerApp] Connecting to kernel 63f93e5f-0f50-43fa-b247-9ad492d6a4f5.
+[W 2024-10-07 16:52:18.081 ServerApp] Got events for closed stream <zmq.eventloop.zmqstream.ZMQStream object at 0x7f22581fb2d0>
+[I 2024-10-07 16:52:18.881 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:52:18.881 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+2024-10-07 16:54:04.408044: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-10-07 16:54:04.438358: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-10-07 16:54:04.447502: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-10-07 16:54:06.635604: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+[I 2024-10-07 16:54:18.956 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 16:54:18.957 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 17:12:19.069 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 17:12:19.070 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 17:14:19.145 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 17:14:19.145 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 17:24:19.230 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 17:24:19.231 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 17:25:47.460 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 17:25:47.460 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 17:26:06.935 ServerApp] Saving file at /conda/envs/jupyter03/lib/python3.11/site-packages/pandas/core/indexes/base.py
+[I 2024-10-07 17:27:47.561 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 17:27:47.562 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 17:29:11.955 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 17:29:11.956 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 17:29:46.589 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 17:29:46.590 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 17:31:46.660 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 17:31:46.660 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 17:33:46.731 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 17:33:46.732 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 17:35:46.795 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 17:35:46.796 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 17:52:06.635 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test2.ipynb
+[W 2024-10-07 17:52:06.636 ServerApp] Notebook 03_DeepPhe/codes/pippin/test2.ipynb is not trusted
+[I 2024-10-07 17:55:21.624 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 17:56:11.471 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 17:57:17.611 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 17:57:17.612 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 17:59:17.727 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 17:59:17.728 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 18:01:15.368 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:01:16.740 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:03:05.710 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:05:05.819 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:05:10.702 ServerApp] Kernel interrupted: 63f93e5f-0f50-43fa-b247-9ad492d6a4f5
+[I 2024-10-07 18:05:10.863 ServerApp] Kernel interrupted: 63f93e5f-0f50-43fa-b247-9ad492d6a4f5
+[I 2024-10-07 18:05:11.048 ServerApp] Kernel interrupted: 63f93e5f-0f50-43fa-b247-9ad492d6a4f5
+[I 2024-10-07 18:05:11.220 ServerApp] Kernel interrupted: 63f93e5f-0f50-43fa-b247-9ad492d6a4f5
+[I 2024-10-07 18:05:17.826 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 18:05:17.827 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 18:07:17.891 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 18:07:17.892 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 18:09:06.020 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:09:08.503 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:09:21.003 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:09:59.764 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:10:16.149 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:12:08.201 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:12:28.958 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:13:36.798 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:14:52.995 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:14:55.870 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:15:08.920 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:15:10.194 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:15:12.914 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:17:12.972 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:17:40.463 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:18:20.538 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:18:25.508 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:18:34.804 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:18:58.203 ServerApp] Kernel restarted: 63f93e5f-0f50-43fa-b247-9ad492d6a4f5
+[I 2024-10-07 18:18:58.212 ServerApp] Connecting to kernel 63f93e5f-0f50-43fa-b247-9ad492d6a4f5.
+[W 2024-10-07 18:19:00.970 ServerApp] Got events for closed stream <zmq.eventloop.zmqstream.ZMQStream object at 0x7f22585215d0>
+[I 2024-10-07 18:19:04.667 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 18:19:04.668 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 18:19:59.803 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 18:19:59.804 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 18:20:42.631 ServerApp] Kernel interrupted: 63f93e5f-0f50-43fa-b247-9ad492d6a4f5
+[I 2024-10-07 18:20:42.805 ServerApp] Kernel interrupted: 63f93e5f-0f50-43fa-b247-9ad492d6a4f5
+[I 2024-10-07 18:20:42.991 ServerApp] Kernel interrupted: 63f93e5f-0f50-43fa-b247-9ad492d6a4f5
+[I 2024-10-07 18:20:44.458 ServerApp] Kernel interrupted: 63f93e5f-0f50-43fa-b247-9ad492d6a4f5
+[I 2024-10-07 18:20:44.645 ServerApp] Kernel interrupted: 63f93e5f-0f50-43fa-b247-9ad492d6a4f5
+[I 2024-10-07 18:20:44.845 ServerApp] Kernel interrupted: 63f93e5f-0f50-43fa-b247-9ad492d6a4f5
+[I 2024-10-07 18:20:46.060 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 18:20:46.060 ServerApp] Notebook 03_DeepPhe/codes/pippin/test.ipynb is not trusted
+[I 2024-10-07 18:22:46.133 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 18:24:22.925 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 18:24:25.187 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 18:25:12.566 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 18:26:13.144 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 18:26:14.222 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 18:27:22.343 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 18:28:36.220 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 18:29:15.340 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:29:29.367 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:29:32.149 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:29:59.991 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:30:03.584 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:30:15.936 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:30:30.576 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 18:30:41.159 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 18:31:38.173 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:32:05.276 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:32:41.259 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 18:34:05.335 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:35:15.096 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:35:21.227 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:37:21.289 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:39:21.354 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:42:12.421 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:42:18.168 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:42:28.381 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:42:29.083 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:43:21.051 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:43:53.511 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:45:49.084 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:45:52.259 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:45:53.776 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:45:57.591 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:47:05.643 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:47:34.085 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:47:40.825 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:48:10.173 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:48:38.576 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 18:49:10.491 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:49:26.235 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:49:56.824 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:49:59.700 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:50:26.518 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 18:50:32.336 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 18:50:54.555 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:51:08.087 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:51:32.548 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:51:50.734 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:53:32.703 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:54:22.360 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:54:23.127 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:54:28.389 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:54:53.651 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 18:54:55.035 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 18:55:00.244 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 18:55:24.235 ServerApp] Kernel interrupted: 63f93e5f-0f50-43fa-b247-9ad492d6a4f5
+[I 2024-10-07 18:55:24.407 ServerApp] Kernel interrupted: 63f93e5f-0f50-43fa-b247-9ad492d6a4f5
+[I 2024-10-07 18:55:24.582 ServerApp] Kernel interrupted: 63f93e5f-0f50-43fa-b247-9ad492d6a4f5
+[I 2024-10-07 18:55:24.755 ServerApp] Kernel interrupted: 63f93e5f-0f50-43fa-b247-9ad492d6a4f5
+[I 2024-10-07 18:55:24.941 ServerApp] Kernel interrupted: 63f93e5f-0f50-43fa-b247-9ad492d6a4f5
+[I 2024-10-07 18:55:25.104 ServerApp] Kernel interrupted: 63f93e5f-0f50-43fa-b247-9ad492d6a4f5
+[I 2024-10-07 18:56:03.487 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 18:56:22.437 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:58:03.590 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 18:58:15.795 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 18:58:28.896 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 18:58:40.916 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:00:12.398 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:00:28.996 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 19:02:12.510 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:02:17.674 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:02:24.295 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:02:29.105 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 19:05:44.241 ServerApp] Kernel restarted: 63f93e5f-0f50-43fa-b247-9ad492d6a4f5
+[I 2024-10-07 19:05:44.251 ServerApp] Connecting to kernel 63f93e5f-0f50-43fa-b247-9ad492d6a4f5.
+[W 2024-10-07 19:05:45.608 ServerApp] Got events for closed stream <zmq.eventloop.zmqstream.ZMQStream object at 0x7f2258655550>
+[I 2024-10-07 19:06:24.377 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:06:38.464 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 19:06:58.222 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:07:16.668 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:07:58.513 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:09:53.219 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 19:09:58.587 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:10:07.994 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 19:11:36.050 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 19:11:58.686 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:12:51.397 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:12:53.074 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:14:53.181 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:16:27.522 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:16:32.337 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 19:17:02.220 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:17:05.180 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 19:18:13.466 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:18:16.292 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 19:20:10.647 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 19:22:14.499 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[W 2024-10-07 19:22:14.575 ServerApp] /ifs/scratch/msph/eigen/hl3565/03_DeepPhe/codes/pippin/.~test.ipynb doesn't exist
+[I 2024-10-07 19:27:58.210 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:28:00.919 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:28:26.730 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:28:38.183 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:29:14.461 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:29:18.138 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 19:30:01.454 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 19:30:21.451 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 19:30:25.366 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 19:31:14.537 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:31:38.126 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:33:38.205 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:35:38.282 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:36:22.475 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 19:37:37.622 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 19:37:39.311 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 19:37:56.330 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 19:39:46.094 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 19:40:16.197 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 19:40:42.469 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 19:41:06.565 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 19:41:19.129 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:43:19.480 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:45:19.596 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:47:07.465 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 19:47:23.388 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 19:49:19.691 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:49:25.461 ServerApp] Kernel interrupted: 63f93e5f-0f50-43fa-b247-9ad492d6a4f5
+[I 2024-10-07 19:49:25.634 ServerApp] Kernel interrupted: 63f93e5f-0f50-43fa-b247-9ad492d6a4f5
+[I 2024-10-07 19:49:25.821 ServerApp] Kernel interrupted: 63f93e5f-0f50-43fa-b247-9ad492d6a4f5
+[I 2024-10-07 19:50:17.645 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:50:18.380 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:51:14.792 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:51:58.534 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:52:30.610 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 19:52:44.490 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 19:53:05.946 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 19:53:06.548 ServerApp] Saving file at /03_DeepPhe/codes/pippin/PIPPIN.ipynb
+[I 2024-10-07 19:53:58.609 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:55:48.306 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:55:55.004 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:56:06.387 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:56:09.467 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:56:14.203 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:56:18.063 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:57:26.506 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 19:58:07.940 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 20:00:08.059 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 20:02:08.166 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 20:04:08.248 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 20:06:08.342 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 20:06:57.879 ServerApp] Kernel interrupted: 63f93e5f-0f50-43fa-b247-9ad492d6a4f5
+[I 2024-10-07 20:06:58.078 ServerApp] Kernel interrupted: 63f93e5f-0f50-43fa-b247-9ad492d6a4f5
+[I 2024-10-07 20:06:58.278 ServerApp] Kernel interrupted: 63f93e5f-0f50-43fa-b247-9ad492d6a4f5
+[I 2024-10-07 20:06:58.451 ServerApp] Kernel interrupted: 63f93e5f-0f50-43fa-b247-9ad492d6a4f5
+[I 2024-10-07 20:08:08.421 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 20:10:08.504 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 20:10:59.237 ServerApp] Saving file at /03_DeepPhe/codes/pippin/test.ipynb
+[I 2024-10-07 20:10:59.598 ServerApp] Starting buffering for f9f0c6e2-4d9d-4317-818f-dcbe9dc51310:39bcbb33-fefb-4163-8bd6-7e15b9b456ca
+[I 2024-10-07 20:10:59.599 ServerApp] Starting buffering for 4d46a520-1009-4ac9-8996-5feff7282f22:9e7813e8-d4a4-4168-b80f-af4d30306f65
+[I 2024-10-07 20:11:05.211 ServerApp] Starting buffering for f557c94a-ae17-412d-890a-2200a7e5a028:b4f95363-3fc8-4836-a58f-2aa3ccd3e446
+[I 2024-10-07 20:11:05.211 ServerApp] Starting buffering for 63f93e5f-0f50-43fa-b247-9ad492d6a4f5:dd704315-5992-48c8-94a1-2ec486defc31
+[I 2024-10-07 20:11:05.212 ServerApp] Starting buffering for b1206b03-8753-4227-be01-30d8b865dce7:dd6395d6-da9e-4eb9-b223-276835e29f46
+[IPKernelApp] WARNING | Parent appears to have exited, shutting down.
+[IPKernelApp] WARNING | Parent appears to have exited, shutting down.
+[IPKernelApp] WARNING | Parent appears to have exited, shutting down.
+[IPKernelApp] WARNING | Parent appears to have exited, shutting down.
+[IPKernelApp] WARNING | Parent appears to have exited, shutting down.
+[IPKernelApp] WARNING | Parent appears to have exited, shutting down.
+[IPKernelApp] WARNING | Parent appears to have exited, shutting down.
+[IPKernelApp] WARNING | Parent appears to have exited, shutting down.
+[IPKernelApp] WARNING | Parent appears to have exited, shutting down.
