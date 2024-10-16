@@ -10,7 +10,7 @@ LT-PI is a statistical framework that estimates the conditional expected genetic
 import numpy as np
 import pandas as pd
 import argparse
-import time
+import time, sys
 import warnings
 import traceback
 
@@ -90,7 +90,7 @@ parser.add_argument('--Q', default=30, type=int,
 
 ## Rank-based inverse normal transformation
 parser.add_argument('--rint', default=False, action='store_true',
-                    help='Apply rank-based inverse normal transformation on LTPI scores (optional for --bin, --con.')
+                    help='Apply rank-based inverse normal transformation on LTPI scores (optional for --bin and --con).'
 
 # Covariance matrix arguments
 parser.add_argument('--gencov', default=None, type=str,
@@ -110,27 +110,29 @@ parser.add_argument('--nsample', default=50000, type=int,
 parser.add_argument('--r2', default=0.0, type=float,
                     help='R2_o threshold for ATSA (default: 0).')
 
-
 if __name__ == '__main__':
 
     args = parser.parse_args()    
     if not args.out:
         raise ValueError('No output file prefix (--out) provided.')
    
-    log = Logger(f'{args.out}.log')
-
+    log = None
+    start_time = None
     try:
         # Generate command call header
-        defaults = vars(parser.parse_args(''))
+        defaults = vars(parser.parse_args([]))
         opts = vars(args)
         non_defaults = [x for x in opts.keys() if opts[x] != defaults[x]]
         header = MASTHEAD
-        header += 'Call:\n./pleio.py \\\n'
+        header += f"Call:\n{' '.join(sys.argv)}\n"
         options = ['--' + x.replace('_', '-') + ' ' + str(opts[x]) + ' \\' for x in non_defaults]
         header += '\n'.join(options).replace('True', '').replace('False', '') + '\n'
+
         
         # Log the start of analysis
+        log = Logger(f'{args.out}.log')
         args.log = log
+        
         args.log.log(header)
         args.log.log(f'Beginning analysis at {time.ctime()}')
         start_time = time.process_time()
@@ -226,10 +228,13 @@ if __name__ == '__main__':
             raise ValueError()      
 
     except Exception:
-        args.log.mlog(traceback.format_exc())
-        raise
+        if log is not None:
+            log.mlog(traceback.format_exc())
+        raise    
         
     finally:
-        args.log.log(f'Analysis finished at {time.ctime()}')
-        time_elapsed = round(time.process_time() - start_time, 2)
-        args.log.log(f'Total time elapsed: {sec_to_str(time_elapsed)}')
+        if log is not None:
+            log.log(f'Analysis finished at {time.ctime()}')
+            if start_time is not None:
+                time_elapsed = round(time.process_time() - start_time, 2)
+                log.log(f'Total time elapsed: {sec_to_str(time_elapsed)}')        

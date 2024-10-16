@@ -27,20 +27,22 @@ def make_pos_def(x, name = '', thres=1e-9):
 
 def optimize_covariance(cov, x0, t=10):
     def objective_function(x, cov_matrix, target):
-        shrinkage_value = x if isinstance(x, float) else x[0]
+        shrinkage_value = float(x[0]) if isinstance(x, (np.ndarray, list)) else float(x)
         reg_cov = make_pos_def(shrunk_covariance(cov_matrix, shrinkage=shrinkage_value))
         cond = np.linalg.cond(reg_cov)
         return (np.abs(cond) - target) ** 2
 
-    res = optimize.minimize(fun=objective_function, x0=x0, args=(cov, t), 
-                            method='L-BFGS-B', bounds=[(0.0001, 0.9999)])
-    
-    # Ensure shrinkage is a float
-    s = res.x if isinstance(res.x, float) else res.x[0]
+    res = optimize.minimize(
+        fun=objective_function,
+        x0=x0,
+        args=(cov, t),
+        method='L-BFGS-B',
+        bounds=[(0.0001, 0.9999)]
+    )
 
-    # Regularize the covariance matrix using the best regularization parameter
+    s = float(res.x[0]) if isinstance(res.x, (np.ndarray, list)) else float(res.x)
+
     res_arr = shrunk_covariance(cov, shrinkage=s)
-    
     return res_arr, s
 
 def iterated_covariance_optimization(cov, t=10, iterations=10):
