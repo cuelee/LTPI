@@ -14,18 +14,23 @@ def contribution_based_greedy_algorithm(gencov = None,
                                         shrinkages = np.round(np.linspace(0.01, 0.99, num = 12),2)):
     
     def gen_R2(gencov, PI, O):
-        Omega_O = gencov.loc[O, O].to_numpy()
-        Omega_OT = gencov.loc[O, [PI]].to_numpy()
-        Omega_OTP = gencov.loc[[PI], O].to_numpy()
-        h2_T = float(gencov.loc[PI, PI])
-
-        cond_O = np.log10(np.linalg.cond(Omega_O))
+        Omega_O   = gencov.loc[O, O].to_numpy(dtype=float)
+        Omega_OT  = gencov.loc[O, [PI]].to_numpy(dtype=float)
+        Omega_OTP = gencov.loc[[PI], O].to_numpy(dtype=float)
+        h2_T      = float(gencov.loc[PI, PI])
+    
+        if h2_T <= 0:
+            raise ValueError(f"h2_T must be > 0, got {h2_T} for PI={PI}")
+    
+        cond_O = float(np.log10(np.linalg.cond(Omega_O)))
         Omega_O_inv = np.linalg.pinv(Omega_O)
-
-        tau_r = h2_T - Omega_OTP.dot(Omega_O_inv).dot(Omega_OT)
-        tau = tau_r/h2_T
-        R2 = 1-tau
-        return(float(R2), cond_O)    
+    
+        proj = (Omega_OTP @ Omega_O_inv @ Omega_OT).item()  # scalar
+        tau_r = h2_T - proj
+        tau = tau_r / h2_T
+        R2 = 1.0 - tau
+    
+        return float(R2), cond_O
     
     def gencor_filter(gencov, thres = 0.3):
         h2 = np.diag(gencov)
@@ -72,7 +77,7 @@ def contribution_based_greedy_algorithm(gencov = None,
         S.index.name = 'TID'
         
         for iter in range(N):
-            l = [nt for nt in gencov.columns if (nt not in S.index) and (nt not in PI)]
+            l = [nt for nt in gencov.columns if (nt not in S.index) and (nt != PI)]
             if len(l) < 1:
                 break
             val = pd.Series([0.0] * len(l), index = l, dtype='float64')
@@ -105,7 +110,7 @@ def contribution_based_greedy_algorithm(gencov = None,
             summary_COND[shrinkage] = S.CN
         return(summary_R2, summary_TID, summary_COND)
     
-    def select_best_shrinkage(summary_R2, summary_COND, summary_TID, r2_thres):
+    def select_best_shrinkage(summary_R2, summary_TID, summary_COND, r2_thres):
         def test_non_decreasing(l):
             l = np.array(l)
             return all(np.diff(l) >= 0)  # Simplified version using np.diff
@@ -164,18 +169,18 @@ def contribution_based_greedy_algorithm(gencov = None,
         best_shrinkage = summary_R2.columns[test_ND & test_sanity][0]
         
         best_S = filter_incremental_R2(
-            summary_R2.loc[:, best_shrinkage].dropna(), 
-            summary_COND.loc[:, best_shrinkage].dropna(), 
+            summary_R2.loc[:, best_shrinkage].dropna(),
             summary_TID.loc[:, best_shrinkage].dropna(),
-            r2_thres = r2_thres
+            summary_COND.loc[:, best_shrinkage].dropna(),
+            r2_thres=r2_thres,
         )
-        
-        return best_S, best_shrinkage    
+            
+        return best_S, best_shrinkage
        
-    if not (isinstance(shrinkages, (np.ndarray,list) ) & (np.array(shrinkages).dtype == 'float')):
-        raise ValueError('Shrinkages should be a float vector')
-    else:
-        shrinkages = np.array(shrinkages)
+    arr = np.asarray(shrinkages)
+    if not isinstance(shrinkages, (np.ndarray, list)) or not np.issubdtype(arr.dtype, np.floating):
+        raise ValueError("Shrinkages should be a float vector")
+    shrinkages = arr.astype(float)
         
     if gencov.shape[0] == 1 and gencov.index[0] == PI:
         warnings.warn("The GeneticCovariance matrix contains no non-target traits to be tested", category=Warning)
@@ -185,7 +190,7 @@ def contribution_based_greedy_algorithm(gencov = None,
         raise ValueError('Genetic Covariance Matrix should have the size > N and must contain target trait:%s'%PI)
 
     if gencov.shape[0] < N:
-        raise ValueError('Genetic Covariance matrix is smaller than N'%gencov.shape[0])
+        raise ValueError(f"Genetic Covariance matrix is smaller than N (p={gencov.shape[0]}, N={N})")
     
     if N <= 0:
         return(np.array([PI]), None, None, None)
@@ -259,7 +264,6 @@ def ATSA(Gennetic_covariance, PI, N = 5, r2_thres = 0.0, shrinkage = np.round(np
 def run_ATSA(args):
     args.shrinkage = np.round(np.linspace(0.01, 0.99, num = 12),2)
     Gennetic_covariance=args.GENCOV
-    print(Gennetic_covariance)
     PI=args.pi
     N = args.Q - 1
     

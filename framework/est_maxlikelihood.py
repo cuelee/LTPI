@@ -3,7 +3,6 @@
 import multiprocessing as mp
 import pandas as pd
 import numpy as np
-import numba
 import scipy.stats as stats
 from scipy.optimize import minimize
 from scipy import stats
@@ -17,7 +16,6 @@ def get_meanTN(p):
     }
     return(meanTN)
 
-@numba.jit(nopython=True)
 def LL_fun(x, q, l, c, m):
     '''
     Objective: minimize - LL 
@@ -61,8 +59,8 @@ def estimate_NA_GSE(conf):
 
 def argmax_mle(param):
     random.seed(220)
-    gencov = param['gencov']
-    envcov = param['envcov']
+    gencov = param['gencov'].copy()
+    envcov = param['envcov'].copy()
     envcov[0, :] = 0
     envcov[:, 0] = 0
     sample_keys = param['sample_keys']
