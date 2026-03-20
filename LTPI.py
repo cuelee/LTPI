@@ -90,7 +90,7 @@ parser.add_argument('--Q', default=30, type=int,
 
 ## Rank-based inverse normal transformation
 parser.add_argument('--rint', default=False, action='store_true',
-                    help='Apply rank-based inverse normal transformation on LTPI scores (optional for --bin and --con).'
+                    help='Apply rank-based inverse normal transformation on LTPI scores (optional for --bin and --con).')
 
 # Covariance matrix arguments
 parser.add_argument('--gencov', default=None, type=str,
