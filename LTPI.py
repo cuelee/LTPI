@@ -160,7 +160,6 @@ def load_gencov_and_set_pi(args, traits=None):
     cov, order = put_pi_first(cov, args.pi)
     return cov, order
 
-
 def load_envcov(args, reference_cov, traits=None):
     if args.envcov:
         envcov = read_cov(args.envcov, traits)
