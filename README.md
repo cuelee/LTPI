@@ -6,7 +6,6 @@
 
 > **Update (March 22, 2026)**  
 > `--pi` is now a required argument that explicitly defines the target phenotype. It is no longer inferred from column order.  
-> The `--pick` option runs ATSA and can be used with `--bin`, `--con`, or as a standalone step.
 
 ---
 
