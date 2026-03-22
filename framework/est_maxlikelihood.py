@@ -125,7 +125,7 @@ def LTPI_MLE(args):
     mle_traits = args.mle_traits
     PI_name = args.pi
     quantitative_traits = args.quantitative_traits
-    phenotype_matrix = args.ltpiin
+    phenotype_matrix = args.ltpiin_con
     gencov_mle = np.asarray(args.GENCOV)
     envcov_mle = np.asarray(args.ENVCOV)
     configuration_info = estimate_NA_GSE(args.conf)

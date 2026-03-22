@@ -20,16 +20,16 @@ from framework.r2_selection import run_ATSA
 from framework.ltpi_utils import (
     is_pos_def, envcov_QC, cov_shrink, read_prev, read_bout,
     read_binary_ltpiin, read_continuous_ltpiin, read_cov,
-    transform_dataframe, write_r2, update_r2
+    transform_dataframe, write_r2, update_r2, put_pi_first
 )
 
 codename = 'LTPI'
-__version__ = '1.0'
+__version__ = '1.2'
 MASTHEAD = f"""
 ************************************************************
 * LTPI ({codename})
 * Version {__version__}
-* (C) 2024 Cue H. Lee, Columbia University
+* (C) 2024-2026 Cue H. Lee, Columbia University
 * MIT license
 ************************************************************
 """
@@ -60,181 +60,271 @@ class Logger:
         """Log message only to file."""
         print(msg, file=self.log_fh)
 
-
 parser = argparse.ArgumentParser()
 
-# Output arguments
+# Output
 parser.add_argument('--out', default='LTPI', type=str,
-                    help='Output file prefix. Default is "LTPI".')
+    help='Output file prefix (default: LTPI).')
 
-# Test mode arguments
-## Binary test input
-parser.add_argument('--bin', default=None, type=str,
-                    help='Path to the binary phenotype input.')
-parser.add_argument('--prevalence', default=None, type=str,
-                    help='Path to disease prevalence information (required for --bin).')
+# Modes
+parser.add_argument('--bin', type=str,
+    help='Path to binary phenotype input.')
+parser.add_argument('--con', type=str,
+    help='Path to continuous phenotype input.')
 
-## Continuous test input
-parser.add_argument('--con', default=None, type=str,
-                    help='Path to the quantitative phenotype input.')
-parser.add_argument('--bout', default=None, type=str,
-                    help='Same as the --out argument used in the --bin test. Required for --con.')
+# Inputs
+parser.add_argument('--prevalence', type=str,
+    help='Path to disease prevalence file (required for --bin).')
+parser.add_argument('--bout', type=str,
+    help='Prefix of binary LTPI output (required for --con).')
 
-# Trait selection (Optimization with --pick)
-parser.add_argument('--pick', default=False, action='store_true',
-                    help='Optimize non-target trait selection based on the r2_o criterion.')
-parser.add_argument('--pi', default=None, type=str,
-                    help='Target column name for the trait selection (required for --pick).')
+# Target trait
+parser.add_argument('--pi', type=str,
+    help='Target phenotype (PI). Required for all modes. Will be placed first and used as prediction target.')
+
+# Trait selection
+parser.add_argument('--pick', action='store_true',
+    help='Enable trait selection using ATSA.')
 parser.add_argument('--Q', default=30, type=int,
-                    help='Number of non-target traits to select (required for --pick; default: 30).')
-
-## Rank-based inverse normal transformation
-parser.add_argument('--rint', default=False, action='store_true',
-                    help='Apply rank-based inverse normal transformation on LTPI scores (optional for --bin and --con).')
-
-# Covariance matrix arguments
-parser.add_argument('--gencov', default=None, type=str,
-                    help='Path to genetic covariance matrix (required for --bin or --con).')
-parser.add_argument('--envcov', default=None, type=str,
-                    help='Path to environmental covariance matrix (required for --bin or --con).')
-parser.add_argument('--shrink', default=None, type=str,
-                    help='Apply covariance shrinkage: G for GENCOV, E for ENVCOV, B for both.')
-parser.add_argument('--shrink_target', default=1.5, type=float,
-                    help='Target condition number for covariance shrinkage (default: 1.5).')
-
-# Parameters specific to GHK algorithm
-parser.add_argument('--nsample', default=50000, type=int,
-                    help='Number of samples for the GHK algorithm (default: 50K).')
-
-# Parameters specific to R2 selection (ATSA)
+    help='Number of non-target traits to select (default: 30).')
 parser.add_argument('--r2', default=0.0, type=float,
-                    help='R2_o threshold for ATSA (default: 0).')
+    help='R2 threshold for ATSA (default: 0).')
+
+# Covariance
+parser.add_argument('--gencov', type=str,
+    help='Path to genetic covariance matrix (required).')
+parser.add_argument('--envcov', type=str,
+    help='Path to environmental covariance matrix (optional).')
+parser.add_argument('--shrink', type=str,
+    help='Covariance shrinkage mode: G, E, or B.')
+parser.add_argument('--shrink_target', default=1.5, type=float,
+    help='Target condition number for shrinkage (default: 1.5).')
+
+# GHK
+parser.add_argument('--nsample', default=50000, type=int,
+    help='Number of GHK samples (default: 50K).')
+
+# Optional
+parser.add_argument('--rint', action='store_true',
+    help='Apply rank-based inverse normal transform (if supported).')
+
+def require_pi(args):
+    if not args.pi:
+        args.log.log('ValueError: --pi is required.')
+        raise ValueError('--pi is required.')
+    return args.pi
+
+def validate_pi_in_columns(df, pi_name, df_name):
+    if pi_name not in df.columns:
+        raise ValueError(f"PI '{pi_name}' not found in {df_name} columns")
+
+def validate_same_traits(df1, df2, name1, name2):
+    cols1 = list(df1.columns)
+    cols2 = list(df2.columns)
+    if set(cols1) != set(cols2):
+        only1 = sorted(set(cols1) - set(cols2))
+        only2 = sorted(set(cols2) - set(cols1))
+        msg = (
+            f"Trait mismatch between {name1} and {name2}. "
+            f"Only in {name1}: {only1}. Only in {name2}: {only2}."
+        )
+        raise ValueError(msg)
+        
+def setup_header(args):
+    defaults = vars(parser.parse_args([]))
+    opts = vars(args)
+    non_defaults = [x for x in defaults.keys() if opts.get(x) != defaults[x]]
+
+    header = MASTHEAD
+    header += f"Call:\n{' '.join(sys.argv)}\n"
+    options = ['--' + x.replace('_', '-') + ' ' + str(opts[x]) + ' \\' for x in non_defaults]
+    header += '\n'.join(options).replace('True', '').replace('False', '') + '\n'
+    return header
+
+def require_arg(args, arg_name, message=None):
+    value = getattr(args, arg_name)
+    if value is None:
+        if message is None:
+            message = f"Missing required argument --{arg_name}"
+        args.log.log(f'ValueError: {message}')
+        raise ValueError(message)
+    return value
+
+def load_gencov_and_set_pi(args, traits=None):
+    require_arg(args, 'gencov', "Can't read --gencov flag.")
+    require_pi(args)
+
+    cov = read_cov(args.gencov, traits)
+    validate_pi_in_columns(cov, args.pi, 'GENCOV')
+
+    cov, order = put_pi_first(cov, args.pi)
+    return cov, order
+
+
+def load_envcov(args, reference_cov, traits=None):
+    if args.envcov:
+        envcov = read_cov(args.envcov, traits)
+        validate_same_traits(reference_cov, envcov, 'GENCOV', 'ENVCOV')
+        validate_pi_in_columns(envcov, args.pi, 'ENVCOV')
+    else:
+        envcov = transform_dataframe(reference_cov)
+
+    envcov, _ = put_pi_first(envcov, args.pi)
+    return envcov
+
+def maybe_run_pick(args):
+    if args.pick:
+        args.selected_traits, args.best_S, args.best_shrinkage, args.summary_data = run_ATSA(args)
+        write_r2(args)
+        args = update_r2(args)
+    return args
+
+def run_binary_mode(args):
+    require_pi(args)
+    require_arg(args, 'prevalence', "Can't read --prevalence flag.")
+
+    args.prev, args.binary_traits = read_prev(args, args.prevalence)
+
+    args.GENCOV, _ = load_gencov_and_set_pi(args, args.binary_traits)
+    args.ENVCOV = load_envcov(args, args.GENCOV, args.binary_traits)
+
+    args.ltpiin_bin = read_binary_ltpiin(args, args.bin, args.binary_traits, str)
+    validate_pi_in_columns(args.ltpiin_bin, args.pi, 'binary phenotype input')
+    args.ltpiin_bin, _ = put_pi_first(args.ltpiin_bin, args.pi)
+
+    args = maybe_run_pick(args)
+
+    args.GENCOV = is_pos_def(args, cov_shrink(args, args.GENCOV.copy(), keys=['G', 'B']), 'GEN')
+    args.ENVCOV = is_pos_def(args, cov_shrink(args, args.ENVCOV.copy(), keys=['E', 'B']), 'ENV')
+
+    args.log.log(
+        f'Condition Number:\n'
+        f'GEN-{np.linalg.cond(args.GENCOV)} '
+        f'ENV-{np.linalg.cond(args.ENVCOV)} '
+        f'GEN+ENV-{np.linalg.cond(args.GENCOV + args.ENVCOV)}'
+    )
+
+    args.conf, args.samp_bin, args.time = LTPI_GHK(args)
+
+    args.conf.to_csv(
+        f'{args.out}.config_summary',
+        sep='\t',
+        index=True,
+        header=True,
+        na_rep='NA'
+    )
+    args.samp_bin.to_csv(
+        f'{args.out}.ltpi_scores.gz',
+        sep='\t',
+        index=True,
+        header=True,
+        compression='gzip',
+        na_rep='NA'
+    )
+
+def run_continuous_mode(args):
+    require_pi(args)
+
+    args.ltpiin_con = read_continuous_ltpiin(args, args.con, None, float)
+
+    gencov, _ = load_gencov_and_set_pi(args)
+
+    # --- enforce PI exists in covariance ---
+    validate_pi_in_columns(gencov, args.pi, 'GENCOV')
+
+    # --- intersect ONLY continuous traits ---
+    continuous_traits = [
+        t for t in args.ltpiin_con.columns
+        if t in gencov.columns and t != args.pi
+    ]
+
+    if len(continuous_traits) == 0:
+        raise ValueError("No overlapping continuous traits between input and GENCOV")
+
+    # --- final trait order ---
+    ordered_traits = [args.pi] + continuous_traits
+
+    # --- subset covariance ---
+    args.GENCOV = gencov.loc[ordered_traits, ordered_traits]
+
+    # --- reorder phenotype (continuous only, PI not included) ---
+    args.ltpiin_con = args.ltpiin_con.loc[:, continuous_traits]
+
+    args.mle_traits = np.array(ordered_traits)
+    args.quantitative_traits = np.array(continuous_traits)
+
+    args.ENVCOV = load_envcov(args, args.GENCOV, ordered_traits)
+
+    args = maybe_run_pick(args)
+
+    require_arg(args, 'bout', "Can't read --bout flag.")
+    args.conf, args.samp_bin = read_bout(args.bout)
+
+    args.GENCOV = is_pos_def(args, args.GENCOV.copy(), 'GEN')
+    args.ENVCOV = is_pos_def(args, args.ENVCOV.copy(), 'ENV')
+
+    args.samp_mle, args.time = LTPI_MLE(args)
+
+    args.samp_mle.to_csv(
+        f'{args.out}.ltpi_scores.gz',
+        sep='\t',
+        index=True,
+        header=True,
+        compression='gzip',
+        na_rep='NA'
+    )
+
+def run_pick_only_mode(args):
+    require_pi(args)
+    require_arg(args, 'gencov', "Can't read --gencov flag.")
+
+    args.GENCOV = read_cov(args.gencov)
+    validate_pi_in_columns(args.GENCOV, args.pi, 'GENCOV')
+    args.GENCOV, _ = put_pi_first(args.GENCOV, args.pi)
+
+    args.log.log('Start R2 selection')
+    args.selected_traits, args.best_S, args.best_shrinkage, args.summary_data = run_ATSA(args)
+    write_r2(args)
 
 if __name__ == '__main__':
 
-    args = parser.parse_args()    
+    args = parser.parse_args()
     if not args.out:
         raise ValueError('No output file prefix (--out) provided.')
-   
+
     log = None
     start_time = None
-    try:
-        # Generate command call header
-        defaults = vars(parser.parse_args([]))
-        opts = vars(args)
-        non_defaults = [x for x in opts.keys() if opts[x] != defaults[x]]
-        header = MASTHEAD
-        header += f"Call:\n{' '.join(sys.argv)}\n"
-        options = ['--' + x.replace('_', '-') + ' ' + str(opts[x]) + ' \\' for x in non_defaults]
-        header += '\n'.join(options).replace('True', '').replace('False', '') + '\n'
 
-        
-        # Log the start of analysis
+    try:
         log = Logger(f'{args.out}.log')
         args.log = log
-        
+
+        header = setup_header(args)
         args.log.log(header)
         args.log.log(f'Beginning analysis at {time.ctime()}')
         start_time = time.process_time()
 
         if args.bin:
-            if args.prevalence:
-                args.prev, args.binary_traits = read_prev(args, args.prevalence)
-            else:
-                args.log.log('ValueError: Can\'t read --prev flag.')
-                raise ValueError()
-
-            if args.gencov:
-                args.GENCOV = read_cov(args.gencov, args.binary_traits)
-                args.pi = args.GENCOV.index[0]
-            else:
-                args.log.log('ValueError: Can\'t read --gencov flag.')
-                raise ValueError()
-
-            args.ENVCOV = read_cov(args.envcov, args.binary_traits) if args.envcov else transform_dataframe(args.GENCOV)
-
-            if args.pick:
-                args.selected_traits, args.best_S, args.best_shrinkage, args.summary_data = run_ATSA(args)
-                write_r2(args)
-                args = update_r2(args)
-                
-            args.GENCOV = is_pos_def(args, cov_shrink(args, args.GENCOV.copy(), keys=['G', 'B']), 'GEN')
-            args.ENVCOV = is_pos_def(args, cov_shrink(args, args.ENVCOV.copy(), keys=['E', 'B']), 'ENV')
-            
-            args.log.log(f'Condition Number:\nGEN-{np.linalg.cond(args.GENCOV)} ENV-{np.linalg.cond(args.ENVCOV)} '
-                         f'GEN+ENV-{np.linalg.cond(args.GENCOV + args.ENVCOV)}')
-            
-            args.ltpiin = read_binary_ltpiin(args, args.bin, args.binary_traits, str)
-            args.conf, args.samp_bin, args.time = LTPI_GHK(args)
-            
-            args.conf.to_csv(f'{args.out}.config_summary', sep='\t', index=True, header=True, na_rep='NA')
-            args.samp_bin.to_csv(f'{args.out}.ltpi_scores.gz', sep='\t', index=True, header=True, compression='gzip', na_rep='NA')
+            run_binary_mode(args)
 
         elif args.con:
-            args.ltpiin = read_continuous_ltpiin(args, args.con, None, float)
-            args.quantitative_traits = args.ltpiin.columns.to_numpy(dtype='U100')
-            
-            if args.gencov:
-                gencov = read_cov(args.gencov)
-                args.pi = gencov.index[0]
-                args.mle_traits = np.insert(args.quantitative_traits, 0, args.pi)
-                args.GENCOV = gencov.loc[args.mle_traits, args.mle_traits]
-            else:
-                args.log.log('ValueError: Can\'t read --gencov flag.')
-                raise ValueError()
-                
-            args.ENVCOV = read_cov(args.envcov, args.mle_traits) if args.envcov else transform_dataframe(args.GENCOV)
-                
-            if args.pick:
-                args.selected_traits, args.best_S, args.best_shrinkage, args.summary_data = run_ATSA(args)
-                write_r2(args)
-                args = update_r2(args)
-            
-            if args.bout:
-                args.conf, args.samp_bin = read_bout(args.bout)
-            else:
-                args.log.log('ValueError: Can\'t read --bout flag.')
-                raise ValueError()
+            run_continuous_mode(args)
 
-            args.GENCOV = is_pos_def(args, args.GENCOV.copy(), 'GEN')
-            args.ENVCOV = is_pos_def(args, args.ENVCOV.copy(), 'ENV')
-
-            args.samp_mle, args.time = LTPI_MLE(args)
-            args.samp_mle.to_csv(f'{args.out}.ltpi_scores.gz', sep='\t', index=True, header=True, compression='gzip', na_rep='NA')
-
-        # Handle --pick option without --bin or --con
         elif args.pick:
-            if not args.pi:
-                args.log.log('ValueError: --pick requires pi column name (--pi [PI]).')
-                raise ValueError()
+            run_pick_only_mode(args)
 
-            if args.gencov:
-                args.GENCOV = read_cov(args.gencov)
-            else:
-                args.log.log('ValueError: Can\'t read --gencov flag.')
-                raise ValueError()
-
-            # Sanity check: Ensure PI is in the column names of the covariance matrix
-            if args.pi not in args.GENCOV.columns:
-                args.log.log(f"Error: PI '{args.pi}' is not found in the covariance matrix columns.")
-                raise ValueError(f"PI '{args.pi}' is not a valid column name in the covariance matrix.")
-            
-            args.log.log('Start R2 selection')
-            args.selected_traits, args.best_S, args.best_shrinkage, args.summary_data = run_ATSA(args)
-            write_r2(args)
-        
         else:
             args.log.log('ValueError: No test flag provided.')
-            raise ValueError()      
+            raise ValueError('No test flag provided.')
 
     except Exception:
         if log is not None:
             log.mlog(traceback.format_exc())
-        raise    
-        
+        raise
+
     finally:
         if log is not None:
             log.log(f'Analysis finished at {time.ctime()}')
             if start_time is not None:
                 time_elapsed = round(time.process_time() - start_time, 2)
-                log.log(f'Total time elapsed: {sec_to_str(time_elapsed)}')        
+                log.log(f'Total time elapsed: {sec_to_str(time_elapsed)}')

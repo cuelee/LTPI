@@ -352,7 +352,7 @@ def LTPI_GHK(args):
 
     # Perform sanity check
     binary_traits = args.binary_traits
-    binary_phenotype = sanity_check(args.ltpiin.loc[:, binary_traits])
+    binary_phenotype = sanity_check(args.ltpiin_bin.loc[:, binary_traits])
     
     # Prepare parameters for GHK
     log = args.log
@@ -371,7 +371,7 @@ def LTPI_GHK(args):
     samples_df.index.names = ['CONF']
     
     # Prepare sample information
-    sample_info = pd.DataFrame(index=args.ltpiin.index)
+    sample_info = pd.DataFrame(index=args.ltpiin_bin.index)
     sample_info.index.names = ['IID']
     sample_info['EG'] = np.array([samples_df.EG[k] for k in binary_phenotype['keys']], dtype=float)
     sample_info['CONF'] = np.array(binary_phenotype['keys'], dtype=str)

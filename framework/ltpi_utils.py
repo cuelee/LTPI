@@ -27,14 +27,14 @@ def cov_shrink(args, cov, keys):
         res = cov
     return res
 
-def read_prev(args, f):
+def read_prev(args, prevf):
     """Read genetic disease prevalence file."""
-    df = pd.read_csv(f, sep=r'\s+', usecols=['TID', 'prev'], dtype={'TID': str, 'prev': float})
-    df.set_index('TID', inplace=True)
-    valid = df['prev'].notna()
-    prevalence = df.loc[valid, 'prev'].to_dict()
+    prev = pd.read_csv(prevf, sep=r'\s+', usecols=['TID', 'prev'], dtype={'TID': str, 'prev': float})
+    prev.set_index('TID', inplace=True)
+    valid = prev['prev'].notna()
+    prevalence = prev.loc[valid, 'prev'].to_dict()
     args.log.log(f'Prevalence file contains {len(prevalence)} traits.')
-    return prevalence, df.index[valid].to_numpy(dtype='U100')
+    return prevalence, prev.index[valid].to_numpy(dtype='U100')
 
 def read_bout(p):
     """Read the binary test output files."""
@@ -103,12 +103,38 @@ def update_r2(args):
     if args.bin is not None:
         args.binary_traits = args.selected_traits
         args.prev = {k: args.prev[k] for k in args.binary_traits}
+        args.ltpiin_bin = args.ltpiin_bin.loc[:, args.binary_traits].copy()
         args.GENCOV = args.GENCOV.loc[args.binary_traits, args.binary_traits].copy()
         args.ENVCOV = args.ENVCOV.loc[args.binary_traits, args.binary_traits].copy()
     elif args.con is not None:
         args.quantitative_traits = args.selected_traits[1:]
         args.mle_traits = args.selected_traits
-        args.ltpiin = args.ltpiin.loc[:, args.quantitative_traits].copy()
+        args.ltpiin_con = args.ltpiin_con.loc[:, args.quantitative_traits].copy()
         args.GENCOV = args.GENCOV.loc[args.mle_traits, args.mle_traits].copy()
         args.ENVCOV = args.ENVCOV.loc[args.mle_traits, args.mle_traits].copy()
     return args
+
+def put_pi_first(df, pi_name):
+    """
+    Reorder DataFrame so that pi_name is first column and index (if square).
+    Works for:
+        - covariance matrices
+        - phenotype matrices
+    """
+
+    if pi_name not in df.columns:
+        raise ValueError(f"{pi_name} not found in DataFrame columns")
+
+    # enforce unique columns
+    assert df.columns.is_unique, "Duplicate phenotype names detected"
+
+    new_cols = [pi_name] + [c for c in df.columns if c != pi_name]
+
+    # reorder columns
+    df = df.loc[:, new_cols]
+
+    # if square matrix → reorder index also
+    if set(df.index) == set(df.columns):
+        df = df.loc[new_cols, new_cols]
+
+    return df, new_cols
