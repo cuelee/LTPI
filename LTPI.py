@@ -238,16 +238,8 @@ def run_continuous_mode(args):
         if t in gencov.columns and t != args.pi
     ]
 
-    if len(continuous_traits) == 0:
-        raise ValueError("No overlapping continuous traits between input and GENCOV")
-
-    # --- final trait order ---
     ordered_traits = [args.pi] + continuous_traits
-
-    # --- subset covariance ---
     args.GENCOV = gencov.loc[ordered_traits, ordered_traits]
-
-    # --- reorder phenotype (continuous only, PI not included) ---
     args.ltpiin_con = args.ltpiin_con.loc[:, continuous_traits]
 
     args.mle_traits = np.array(ordered_traits)
