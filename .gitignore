@@ -161,3 +161,4 @@ cython_debug/
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+test_*
