@@ -258,7 +258,7 @@ We thank Matthieu Pluntz for helpful comments and suggestions that improved the 
 
 If you use LTPI in your work, please cite:
 
-Lee, C.H., Khan, A., Wang, C. et al.  
+Lee CH, Khan A, Wang C, Weng CH, Buxbaum JD, Kiryluk K, Ionita-Laza I.  
 *Liability threshold model-based disease risk prediction based on electronic health record phenotypes.*  
-Nature Genetics 57, 2872–2881 (2025).  
+Nature Genetics. 2025;57:2872–2881.  
 https://doi.org/10.1038/s41588-025-02370-4
