@@ -116,9 +116,9 @@ Specify the required core arguments for each mode and optional parameters like c
 |----------------|-------------|----------|
 | `--bin`        | Path to binary phenotype input file. | Yes (binary mode) |
 | `--con`        | Path to continuous phenotype input file. | Yes (continuous mode) |
-| `--prevalence` | Path to prevalence file (binary traits). | Yes (binary mode) |
-| `--bout`       | Output prefix from binary step. | Yes (continuous mode) |
-| `--pi`         | Target phenotype (placed first and used as prediction target). Must be present in covariance matrices and binary output. | Yes |
+| `--prevalence` | Path to prevalence file for binary traits. | Yes (binary mode) |
+| `--bout`       | Output prefix from the binary step. | Yes (continuous mode) |
+| `--pi`         | Target phenotype used for prediction. | Yes |
 
 ### Covariance Matrix Arguments
 
