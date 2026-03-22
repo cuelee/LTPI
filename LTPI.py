@@ -44,7 +44,7 @@ def sec_to_str(t):
             t -= v * sec
             f += f'{round(v)}{label} '
     return f
-
+    
 class Logger:
     """Lightweight logging utility."""
     
@@ -171,8 +171,48 @@ def load_envcov(args, reference_cov, traits=None):
     envcov, _ = put_pi_first(envcov, args.pi)
     return envcov
 
+def section(title):
+    return f"\n{title}\n" + "-" * len(title)
+
+def kv(key, value, indent=2):
+    return f"{' ' * indent}{key:<20}: {value}"
+
+def validate_input_sanity(args, df=None, cov=None, prev=None, require_pi_in_df=True):
+    if df is not None:
+        if require_pi_in_df:
+            if args.pi not in df.columns:
+                raise ValueError(f"PI '{args.pi}' not found in phenotype matrix")
+            if df.columns[0] != args.pi:
+                raise ValueError(
+                    f"PI '{args.pi}' must be the first phenotype column, "
+                    f"but found at position {df.columns.get_loc(args.pi)}"
+                )
+
+    if cov is not None:
+        if args.pi not in cov.columns:
+            raise ValueError(f"PI '{args.pi}' not found in covariance matrix")
+        if cov.columns[0] != args.pi:
+            raise ValueError(
+                f"PI '{args.pi}' must be the first covariance column, "
+                f"but found at position {cov.columns.get_loc(args.pi)}"
+            )
+
+    if df is not None and cov is not None and require_pi_in_df:
+        if list(df.columns) != list(cov.columns):
+            raise ValueError(
+                "Phenotype and covariance column orders do not match.\n"
+                f"Phenotype order: {list(df.columns)}\n"
+                f"Covariance order: {list(cov.columns)}"
+            )
+
+    if prev is not None:
+        prev_traits = list(prev.keys()) if isinstance(prev, dict) else list(prev.index)
+        if args.pi not in prev_traits:
+            raise ValueError(f"PI '{args.pi}' not found in prevalence file")
+            
 def maybe_run_pick(args):
     if args.pick:
+        validate_input_sanity(args, cov=args.GENCOV)
         args.selected_traits, args.best_S, args.best_shrinkage, args.summary_data = run_ATSA(args)
         write_r2(args)
         args = update_r2(args)
@@ -196,13 +236,19 @@ def run_binary_mode(args):
     args.GENCOV = is_pos_def(args, cov_shrink(args, args.GENCOV.copy(), keys=['G', 'B']), 'GEN')
     args.ENVCOV = is_pos_def(args, cov_shrink(args, args.ENVCOV.copy(), keys=['E', 'B']), 'ENV')
 
-    args.log.log(
-        f'Condition Number:\n'
-        f'GEN-{np.linalg.cond(args.GENCOV)} '
-        f'ENV-{np.linalg.cond(args.ENVCOV)} '
-        f'GEN+ENV-{np.linalg.cond(args.GENCOV + args.ENVCOV)}'
-    )
+    args.log.log(section("Condition numbers"))
+    args.log.log(kv("GEN", np.linalg.cond(args.GENCOV)))
+    args.log.log(kv("ENV", np.linalg.cond(args.ENVCOV)))
+    args.log.log(kv("GEN+ENV", np.linalg.cond(args.GENCOV + args.ENVCOV)))
 
+    validate_input_sanity(
+        args,
+        df=args.ltpiin_bin,
+        cov=args.GENCOV,
+        prev=args.prev,
+        require_pi_in_df=True
+    )
+    args.log.log('Input validation passed.')
     args.conf, args.samp_bin, args.time = LTPI_GHK(args)
 
     args.conf.to_csv(
@@ -228,10 +274,7 @@ def run_continuous_mode(args):
 
     gencov, _ = load_gencov_and_set_pi(args)
 
-    # --- enforce PI exists in covariance ---
     validate_pi_in_columns(gencov, args.pi, 'GENCOV')
-
-    # --- intersect ONLY continuous traits ---
     continuous_traits = [
         t for t in args.ltpiin_con.columns
         if t in gencov.columns and t != args.pi
@@ -254,8 +297,15 @@ def run_continuous_mode(args):
     args.GENCOV = is_pos_def(args, args.GENCOV.copy(), 'GEN')
     args.ENVCOV = is_pos_def(args, args.ENVCOV.copy(), 'ENV')
 
+    validate_input_sanity(
+        args,
+        df=args.ltpiin_con,
+        cov=args.GENCOV,
+        require_pi_in_df=False
+    )
+    args.log.log('Input validation passed.')
     args.samp_mle, args.time = LTPI_MLE(args)
-
+    
     args.samp_mle.to_csv(
         f'{args.out}.ltpi_scores.gz',
         sep='\t',
@@ -274,6 +324,8 @@ def run_pick_only_mode(args):
     args.GENCOV, _ = put_pi_first(args.GENCOV, args.pi)
 
     args.log.log('Start R2 selection')
+    validate_input_sanity(args, cov=args.GENCOV)
+    args.log.log('Input validation passed.')
     args.selected_traits, args.best_S, args.best_shrinkage, args.summary_data = run_ATSA(args)
     write_r2(args)
 
