@@ -245,14 +245,6 @@ We thank Matthieu Pluntz for helpful comments and suggestions that improved the 
 
 ---
 
-## Contact
-
-For inquiries, support, or feedback, submit an issue on GitHub or contact:
-
-**Cue Hyunkyu Lee**  
-Columbia University  
-Email: [hl3565@cumc.columbia.edu](mailto:hl3565@cumc.columbia.edu?subject=[GitHub]%20LTPI%20Inquiry)
-
 ## Citation
 
 If you use LTPI in your work, please cite:
@@ -261,3 +253,13 @@ Lee, C.H., Khan, A., Wang, C. et al.
 *Liability threshold model-based disease risk prediction based on electronic health record phenotypes.*  
 Nature Genetics 57, 2872–2881 (2025).  
 https://doi.org/10.1038/s41588-025-02370-4
+
+---
+
+## Contact
+
+For inquiries, support, or feedback, submit an issue on GitHub or contact:
+
+**Cue Hyunkyu Lee**  
+Columbia University  
+Email: [hl3565@cumc.columbia.edu](mailto:hl3565@cumc.columbia.edu?subject=[GitHub]%20LTPI%20Inquiry)
