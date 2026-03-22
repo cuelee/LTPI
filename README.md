@@ -151,13 +151,12 @@ Specify the required core arguments for each mode and optional parameters like c
 
 ### Trait Alignment
 
-LTPI automatically aligns traits across phenotype inputs and covariance matrices.
+LTPI aligns traits using the specified target phenotype (`--pi`) and the provided covariance matrices.
 
-- In binary mode (`--bin`), the target phenotype (`--pi`) must be present in the phenotype input.
-- In continuous mode (`--con`), the target phenotype is obtained from the binary output (`--bout`) and does not need to appear in the continuous phenotype input.
-- Only traits shared between inputs and covariance matrices are used in the analysis.
-
-Incorrect or inconsistent trait naming across files may result in errors.
+In binary mode (`--bin`), the target phenotype (`--pi`) must be present in the binary phenotype input.
+In continuous mode (`--con`), the target phenotype is defined by `--pi` and obtained from the binary output (`--bout`), so it does not need to appear in the continuous phenotype input.
+Traits used in the analysis must be present in the relevant covariance matrix. In continuous mode, only shared non-target traits are retained from the continuous phenotype input.
+Incorrect or inconsistent trait names across files may result in errors.
 
 ---
 
