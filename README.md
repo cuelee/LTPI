@@ -18,13 +18,14 @@
    - [Covariance Matrix Arguments](#covariance-matrix-arguments)
    - [Optional Arguments](#optional-arguments)
    - [Output Control](#output-control)
+   - [Trait Alignment](#trait-alignment)
 5. [Input File Formats](#input-file-formats)
    - [Phenotype Matrix](#phenotype-matrix)
    - [Covariance Matrix](#covariance-matrix)
-   - [Prevalence](#prevalence-of-binary-traits)
+   - [Prevalence of binary traits](#prevalence-of-binary-traits)
 6. [Output Files](#output-files)
 7. [Examples](#examples)
-8. [Contact](#contact)
+8. [Citation](#citation)
 
 ---
 
