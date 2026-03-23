@@ -10,7 +10,7 @@ wkd=$(pwd)
 # - genetic_covariance_bin.txt: the genetic covariance matrix for the binary traits
 # - prevalence.txt: the disease prevalence information
 # The results are stored in the 'test_bin' working directory.
-python ${wkd}/LTPI.py --bin ${wkd}/example/binput.txt --gencov ${wkd}/example/genetic_covariance_bin.txt --prevalence ${wkd}/example/prevalence.txt --out ${wkd}/test_bin
+python ${wkd}/LTPI.py --bin ${wkd}/example/binput.txt --pi trait_A --gencov ${wkd}/example/genetic_covariance_bin.txt --prevalence ${wkd}/example/prevalence.txt --out ${wkd}/test_bin
 
 # 2. Continuous Phenotype Analysis
 # This command runs LTPI with continuous phenotype input. 
@@ -19,7 +19,7 @@ python ${wkd}/LTPI.py --bin ${wkd}/example/binput.txt --gencov ${wkd}/example/ge
 # - genetic_covariance_con.txt: the genetic covariance matrix for continuous traits
 # - test_bin: output from the previous binary analysis (used for reference)
 # Results are saved in 'test_con'.
-python ${wkd}/LTPI.py --con ${wkd}/example/qinput.txt --gencov ${wkd}/example/genetic_covariance_con.txt --bout ${wkd}/test_bin --out ${wkd}/test_con
+python ${wkd}/LTPI.py --con ${wkd}/example/qinput.txt --pi trait_A --gencov ${wkd}/example/genetic_covariance_con.txt --bout ${wkd}/test_bin --out ${wkd}/test_con
 
 # 3. Trait Selection Optimization
 # This command optimizes trait selection based on the r2_o criterion using the following:
