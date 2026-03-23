@@ -249,11 +249,9 @@ def run_binary_mode(args):
         require_pi_in_df=True
     )
 
-    print(args.ltpiin_bin, args.GENCOV, args.prev)
     args.log.log('Input validation passed.')
     args.conf, args.samp_bin, args.time = LTPI_GHK(args)
-    print(args.samp_bin)
-
+    
     args.conf.to_csv(
         f'{args.out}.config_summary',
         sep='\t',
