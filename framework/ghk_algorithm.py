@@ -351,8 +351,8 @@ def LTPI_GHK(args):
         return {'keys': keys}
 
     # Perform sanity check
-    binary_traits = args.binary_traits
-    binary_phenotype = sanity_check(args.ltpiin_bin.loc[:, binary_traits])
+    binary_traits = args.ltpiin_bin.columns
+    binary_phenotype = sanity_check(args.ltpiin_bin)
     
     # Prepare parameters for GHK
     log = args.log
