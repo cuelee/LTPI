@@ -6,6 +6,7 @@ wkd=$(pwd)
 # 1. Binary Phenotype Analysis
 # This command runs LTPI using binary phenotype input. 
 # The input files include:
+# - trait_A: target column name for the analysis
 # - binput.txt: the binary phenotype data
 # - genetic_covariance_bin.txt: the genetic covariance matrix for the binary traits
 # - prevalence.txt: the disease prevalence information
@@ -15,6 +16,7 @@ python ${wkd}/LTPI.py --bin ${wkd}/example/binput.txt --pi trait_A --gencov ${wk
 # 2. Continuous Phenotype Analysis
 # This command runs LTPI with continuous phenotype input. 
 # It requires:
+# - trait_A: target column name for the analysis
 # - qinput.txt: the quantitative phenotype data
 # - genetic_covariance_con.txt: the genetic covariance matrix for continuous traits
 # - test_bin: output from the previous binary analysis (used for reference)
